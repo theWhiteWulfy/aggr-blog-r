@@ -1,0 +1,36 @@
+[
+    {
+        "id": "about-us-pages",
+        "about_us_video": {
+            "about_video_bg": "../../data/images/banners/about-video-banner.jpg",
+            "video_link": "https://www.youtube.com/watch?v=d7jAiAYusUg"
+        },
+        "about_us_platform": {
+            "id": "open-platform",
+            "image1": "../../data/images/icons/open-platform.png",
+            "title": "Open Platform",
+            "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the 1500s when an unknown printer took galley type and scrambled.",
+            "text2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard."
+        },
+        "about_us_digital-publishing": {
+            "id": "digital-publishing",
+            "image2": "../../data/images/icons/digital-publishing.png",
+            "title": "Digital Publishing",
+            "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the 1500s when an unknown printer took galley type and scrambled.",
+            "text2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard."
+        },
+        "history_title": "You Can <span>Read</span> And <span>Write</span> With ElderGagaroth.",
+        "history": [
+            {
+                "id": "1",
+                "title": "Mission & Vission",
+                "decText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eve since the 1500 when an unknown printer took a galley type scrambled’s make a type specimen book. It has survived not only five centuries also the leap into electronic typesetting."
+            },
+            {
+                "id": "2",
+                "title": "ElderGagaroth History",
+                "decText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eve since the 1500 when an unknown printer took a galley type scrambled’s make a type specimen book. It has survived not only five centuries also the leap into electronic typesetting."
+            }
+        ]
+    }
+]

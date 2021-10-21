@@ -1,0 +1,68 @@
+[
+    {
+        "text": "Home",
+        "link": "/",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "text": "Home Two",
+                "link": "/index-2"
+            },
+            {
+                "text": "Home Three",
+                "link": "/index-3"
+            },
+            {
+                "text": "Home Four",
+                "link": "/index-4"
+            },
+            {
+                "text": "Home Five",
+                "link": "/index-5"
+            }
+            ,
+            {
+                "text": "Home Six",
+                "link": "/index-6"
+            }
+        ]
+    },
+    {
+        "text": "About",
+        "link": "/about-us",
+        "isSubmenu": false
+    },
+    {
+        "text": "Category",
+        "link": "/category/food",
+        "isSubmenu": false
+    },
+    {
+        "text": "Pages",
+        "link": "/faq",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "text": "Blog Details",
+                "link": "/customize-i-woocommerce-theme-with-countless-video"
+            },
+            {
+                "text": "Error 404",
+                "link": "/404"
+            },
+            {
+                "text": "FAQ's",
+                "link": "/faq"
+            },
+            {
+                "text": "Register",
+                "link": "/register"
+            }
+        ]
+    },
+    {
+        "text": "Contact",
+        "link": "/contact-us",
+        "isSubmenu": false
+    }
+]

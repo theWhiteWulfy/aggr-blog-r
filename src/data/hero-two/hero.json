@@ -1,0 +1,22 @@
+[
+    {
+        "id": "hero-two",
+        "hero-two": {
+            "shortTitle": "ALL SOLUTION IN ONE",
+            "title": "Unlimited",
+            "subTitle": "Advice, Tutorial, Resource"
+
+        }
+    },
+    {
+        "id": "hero-three",
+        "hero-two": {
+            "title": "Open Platform three"
+        },
+        "hero-three": {
+            "id": "open-platform three",
+            "title": "Open Platform"
+        }
+    }
+
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "id": "faq-area",
+        "heading": "Some Question And Answer, <span>Look’s here.</span>",
+        "image1": "../../data/images/banners/faq-text.png",
+        "faq": [
+            {
+                "id": "about-faq-1",
+                "title": " How do the different types of drawings work?",
+                "content": "Lorem Ipsum is simply dummy text of printing and typesetting industry. Lorem psum has been the dustry standard dummy text since the printer into electronic."
+            },
+            {
+                "id": "about-faq-2",
+                "title": " How long do the records of drawings persist?",
+                "content": "Branding is more than a logo and a clever tagline. Your brand tells the story of your company. It’s your message and your values. When that happens, remarkable things occur."
+            },
+            {
+                "id": "about-faq-3",
+                "title": "Why do I need to be careful public drawings?",
+                "content": "Branding is more than a logo and a clever tagline. Your brand tells the story of your company. It’s your message and your values. When that happens, remarkable things occur."
+            },
+            {
+                "id": "about-faq-4",
+                "title": "Can I use RANDOM.ORG to draw straws?",
+                "content": "Branding is more than a logo and a clever tagline. Your brand tells the story of your company. It’s your message and your values. When that happens, remarkable things occur."
+            },
+            {
+                "id": "about-faq-5",
+                "title": "Do the numbers exhibit Benford's Law?",
+                "content": "Branding is more than a logo and a clever tagline. Your brand tells the story of your company. It’s your message and your values. When that happens, remarkable things occur."
+            },
+            {
+                "id": "about-faq-6",
+                "title": "Are the numbers suitable for experiments?",
+                "content": "Branding is more than a logo and a clever tagline. Your brand tells the story of your company. It’s your message and your values. When that happens, remarkable things occur."
+            }
+        ]
+    }
+]

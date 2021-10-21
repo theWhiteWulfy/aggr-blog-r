@@ -1,0 +1,51 @@
+[
+    {
+        "id": "team-area",
+        "section_title": {
+            "title": "Leadership & Experienced Team",
+            "subTitle": "Meet Our Team Members"
+        },
+        "team": [
+            {
+                "images": "../../data/images/team/team-1.jpg",
+                "name": "Harvey Harrington",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-2.jpg",
+                "name": "Alejandra Bobbitt",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-3.jpg",
+                "name": "Sherika Hankins",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-4.jpg",
+                "name": "Destiny Kendall",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-5.jpg",
+                "name": "Marleen Larry",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-6.jpg",
+                "name": "Sherika Hankins",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-7.jpg",
+                "name": "Sherika Hankins",
+                "designation": "Founder"
+            },
+            {
+                "images": "../../data/images/team/team-8.jpg",
+                "name": "Sherika Hankins",
+                "designation": "Founder"
+            }
+        ]
+    }
+]

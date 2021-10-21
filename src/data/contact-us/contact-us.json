@@ -1,0 +1,31 @@
+[
+    {
+        "id": "contact-us-area",
+        "officeWrap": [
+            {
+                "id": "contact-us-1",
+                "image1": "../../data/images/banners/office-01.jpg",
+                "officeName": "Head Quater",
+                "contactNumber": "(00) 111 222 3333",
+                "contactEmail": "gmail@gmail.com",
+                "addresText": "address text"
+            },
+            {
+                "id": "contact-us-2",
+                "image1": "../../data/images/banners/office-02.jpg",
+                "officeName": "USA, Office",
+                "contactNumber": "(00) 111 222 3333",
+                "contactEmail": "gmail@gmail.com",
+                "addresText": "address text"
+            },
+            {
+                "id": "contact-us-3",
+                "image1": "../../data/images/banners/office-03.jpg",
+                "officeName": "India, Office",
+                "contactNumber": "(00) 111 222 3333",
+                "contactEmail": "gmail@gmail.com",
+                "addresText": "address text"
+            }
+        ]
+    }
+]

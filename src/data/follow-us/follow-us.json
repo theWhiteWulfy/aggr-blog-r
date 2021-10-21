@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Facebook",
+        "socailIcon": "icofont-facebook",
+        "number": "5,685K",
+        "path": "https://www.facebook.com/"
+    },{
+        "title": "Twitter",
+        "socailIcon": "icofont-twitter",
+        "number": "6,97K+",
+        "path": "https://twitter.com/home"
+    },{
+        "title": "Instagram",
+        "socailIcon": "icofont-instagram",
+        "number": "6,97K",
+        "path": "https://www.instagram.com/"
+    },{
+        "title": "YouTube",
+        "socailIcon": "icofont-youtube-play",
+        "number": "5,685K",
+        "path": "https://www.youtube.com/"
+    }
+]

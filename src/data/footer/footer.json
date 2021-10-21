@@ -1,0 +1,71 @@
+[
+    {
+        "footerAbout": "Lorem Ipsum is simply dummy text of the industry orem Ipsum has been the industry's since the when unknown.",
+        "quickLink": [
+            {
+                "text": "About Us",
+                "path": "/about-us"
+            },
+            {
+                "text": "Contact Us",
+                "path": "/contact-us"
+            },
+            {
+                "text": "Local Print Ads",
+                "path": "/customize-i-woocommerce-theme-with-countless-video"
+            },
+            {
+                "text": "FAQ’s",
+                "path": "/faq"
+            },
+            {
+                "text": "Careers",
+                "path": "/404"
+            }
+        ],
+        "quickLinkTwo": [
+            {
+                "text": "Privacy Policy",
+                "path": "/"
+            },
+            {
+                "text": "Discussion",
+                "path": "/"
+            },
+            {
+                "text": "Terms & Conditions",
+                "path": "/"
+            },
+            {
+                "text": "Customer Support",
+                "path": "/contact-us"
+            },
+            {
+                "text": "Course FAQ’s",
+                "path": "/faq"
+            }
+        ],
+        "quickLinkThree": [
+            {
+                "text": "Lefestyle",
+                "path": "/category/food"
+            },
+            {
+                "text": "Healthy",
+                "path": "/category/food"
+            },
+            {
+                "text": "Restaurent",
+                "path": "/category/food"
+            },
+            {
+                "text": "Travel Tips",
+                "path": "/customize-i-woocommerce-theme-with-countless-video"
+            },
+            {
+                "text": "Marketing",
+                "path": "/category/food"
+            }
+        ]
+    }
+]

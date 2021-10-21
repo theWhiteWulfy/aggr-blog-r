@@ -1,0 +1,32 @@
+[
+    {
+        "id": "testimonial-area",
+        "section_title": {
+            "title": "What People Say About Us",
+            "subTitle": "Some Testimonial"
+        },
+        "testimonial": [
+            {
+                "images": "../../data/images/author/testimonial-1.png",
+                "name": "Rosario Ferraro",
+                "designation": "MARKETER",
+                "title": "Printer took a galley of type and scrambled to make book.",
+                "desText": "Lorem has been them indust standard unknown printer took galley text printing and typesetting industry been industry standard dummy ever."
+            },
+            {
+                "images": "../../data/images/author/testimonial-2.png",
+                "name": "Sherika Hankins",
+                "designation": "Founder",
+                "title": "Printer took a galley of type and scrambled to make book.",
+                "desText": "Lorem has been them indust standard unknown printer took galley text printing and typesetting industry been industry standard dummy ever."
+            },
+            {
+                "images": "../../data/images/author/testimonial-3.png",
+                "name": "Sherika Hankins",
+                "designation": "Founder",
+                "title": "Printer took a galley of type and scrambled to make book.",
+                "desText": "Lorem has been them indust standard unknown printer took galley text printing and typesetting industry been industry standard dummy ever."
+            }
+        ]
+    }
+]

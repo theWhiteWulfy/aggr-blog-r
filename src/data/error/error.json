@@ -1,0 +1,9 @@
+[
+    {
+        "id": "error-area",
+        "heading": "We are sorry for this error. Can’t find this page.",
+        "subHeading": "This Page is Not Found.",
+        "image1": "../../data/images/banners/error-404.png",
+        "image2": "../../data/images/shap/error-shap.png"
+    }
+]

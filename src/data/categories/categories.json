@@ -1,0 +1,81 @@
+[
+    
+    {
+        "name": "Video",
+        "image": "../images/catagory/web.png",
+        "color": "video",
+        "trending": true
+    },
+    {
+        "name": "Education",
+        "image": "../images/catagory/travel.png",
+        "color": "education",
+        "trending": true
+    },
+    {
+        "name": "Technology",
+        "image": "../images/catagory/technology.png",
+        "color": "technology",
+        "trending": true
+    },
+    {
+        "name": "Marketing",
+        "image": "../images/catagory/7.png",
+        "color": "marketing",
+        "trending": true
+    },
+    {
+        "name": "Food",
+        "image": "../images/topic/02_topic.jpg",
+        "color": "food",
+        "trending": true
+    },
+    {
+        "name": "Business",
+        "image": "../images/topic/03_topic.jpg",
+        "color": "business",
+        "trending": true
+    },
+    {
+        "name": "Doctor",
+        "image": "../images/catagory/technology.png",
+        "color": "doctor",
+        "trending": true
+    },
+    {
+        "name": "Lifestyle",
+        "image": "../images/catagory/technology.png",
+        "color": "lifestyle",
+        "trending": false
+    },
+    {
+        "name": "WordPress",
+        "image": "../images/catagory/technology.png",
+        "color": "WordPress",
+        "trending": false
+    },
+    {
+        "name": "JavaScript",
+        "image": "../images/catagory/8.png",
+        "color": "JavaScript",
+        "trending": false
+    }
+    ,{
+        "name": "UX Design",
+        "image": "../images/catagory/7.png",
+        "color": "UX Design",
+        "trending": false
+    }
+    ,{
+        "name": "Online Tutorial",
+        "image": "../images/catagory/6.png",
+        "color": "Online Tutorial",
+        "trending": false
+    }
+    ,{
+        "name": "Laravel",
+        "image": "../images/catagory/5.png",
+        "color": "Online Tutorial",
+        "trending": false
+    }
+]
