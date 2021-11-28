@@ -12,12 +12,12 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" pathname="/" />
-            <HeroOne/>
-            <TredingArticle/>
-            <FromFollowingArea/>
-            <TrendingTopics/>
-            <FeaturedVideoArea/>
-            <AddBanner/>
+            <HeroOne />
+            <TredingArticle />
+            <FromFollowingArea />
+            <TrendingTopics />
+            <FeaturedVideoArea />
+            <AddBanner />
         </Layout>
     );
 };
