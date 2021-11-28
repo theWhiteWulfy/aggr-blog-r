@@ -1,29 +1,29 @@
 /* eslint-disable prettier/prettier */
-/*  company-name ElderGagaroth
+/*  company-name LOKAL Directory
     module-name gagarath
 */    
 
 module.exports = {
-    title: "ElderGagaroth",
-    titleTemplate: "ElderGagaroth - React MTG",
+    title: "LOKAL Directory",
+    titleTemplate: "LOKAL Directory - React MTG",
     description:
-        "ElderGagaroth is ElderGagaroth",
-    author: "ElderGagaroth",
-    twitterUsername: "@ElderGagaroth",
-    keywords: ["bootstrap", "html", "react", "gatsby", "template", "blog", "creative"],
+        "LOKAL Directory is LOKAL Directory",
+    author: "LOKAL Directory",
+    twitterUsername: "@LOKAL Directory",
+    keywords: ["gatsby", "blog"],
     image: "banner_image.png",
-    siteUrl: "https://ElderGagaroth.com",
+    siteUrl: "https://LOKALDirectory.com",
     pathPrefix: "/bootstrap-template",
     localUrl: "http://localhost:8000",
-    canonical: "https://ElderGagaroth.com",
+    canonical: "https://LOKALDirectory.com",
     social: {
-        facebook: "https://www.facebook.com/ElderGagaroth",
-        twitter: "https://twitter.com/ElderGagaroth",
-        linkedin: "https://www.linkedin.com/company/ElderGagaroth/",
+        facebook: "https://www.facebook.com/LOKALDirectory",
+        twitter: "https://twitter.com/LOKALDirectory",
+        linkedin: "https://www.linkedin.com/company/LOKALDirectory/",
     },
     siteLanguage: "en",
     favicon: "src/assets/images/favicon.png", // Used for manifest favicon generation
-    shortName: "ElderGagaroth", // shortname for manifest. *Must* be shorter than 12 characters
+    shortName: "LOKAL Dir", // shortname for manifest. *Must* be shorter than 12 characters
     themeColor: "#5E60E7",
     backgroundColor: "#fff",
 };
