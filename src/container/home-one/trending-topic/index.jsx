@@ -1,42 +1,46 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import { graphql, useStaticQuery } from 'gatsby';
-import TrendingTopicItems from '../../../components/trending-topics';
-import {flatDeep} from "../../../utils/functions"
-import NewsletterSubscribeOne from '../../../components/newsletter-subscribe';
+import { graphql, useStaticQuery } from "gatsby";
+import TrendingTopicItems from "../../../components/trending-topics";
+import { flatDeep } from "../../../utils/functions";
+import NewsletterSubscribeThree from "../../../components/newsletter-subscribe-three";
 import {
     BgGray1Area,
     TrendingTopicArea,
     TrendingTopicSectionTitle,
     TrendingTopicItemWrap,
     TrendingTopicNavigation,
-    NavigationButton
+    NavigationButton,
 } from "./style";
 
-
 const TrendingTopics = () => {
-
     const trendingTopicsQuery = useStaticQuery(graphql`
         query TrendingTopicsQuery {
-            allCategoriesJson(filter: {trending: {eq: true}}) {
+            allCategoriesJson(filter: { trending: { eq: true } }) {
                 edges {
                     node {
                         name
                         color
                         image {
                             childImageSharp {
-                                gatsbyImageData(width: 160, height: 160, quality: 100)
+                                gatsbyImageData(
+                                    width: 160
+                                    height: 160
+                                    quality: 100
+                                )
                             }
                         }
                     }
                 }
             }
         }
-    `)
+    `);
 
     const trendingTopicsData = trendingTopicsQuery.allCategoriesJson.edges;
-     const categories = [...new Set(flatDeep(trendingTopicsData.map(td => td.node)))]
+    const categories = [
+        ...new Set(flatDeep(trendingTopicsData.map((td) => td.node))),
+    ];
 
     return (
         <BgGray1Area>
@@ -55,7 +59,6 @@ const TrendingTopics = () => {
                             </TrendingTopicNavigation>
                         </TrendingTopicSectionTitle>
                         <TrendingTopicItemWrap>
-
                             <Swiper
                                 layout={{
                                     nav: "trending-topic-slider-navigation",
@@ -63,7 +66,7 @@ const TrendingTopics = () => {
                                 }}
                                 navigation={{
                                     nextEl: ".trending-topic-button-next",
-                                    prevEl: ".trending-topic-button-prev"
+                                    prevEl: ".trending-topic-button-prev",
                                 }}
                                 slidesPerView={5}
                                 spaceBetween={35}
@@ -83,29 +86,26 @@ const TrendingTopics = () => {
                                     },
                                 }}
                             >
-                            {categories && categories.map((cat, i) => {
-                                return (
-                                    <SwiperSlide key={i}>
-                                        <TrendingTopicItems
-                                            name={cat.name}
-                                            color={cat.color}
-                                            image={cat.image}
-                                        />
-                                    </SwiperSlide>
-                                );
-                            })}
-                                    
-                        </Swiper>
-                            
+                                {categories &&
+                                    categories.map((cat, i) => {
+                                        return (
+                                            <SwiperSlide key={i}>
+                                                <TrendingTopicItems
+                                                    name={cat.name}
+                                                    color={cat.color}
+                                                    image={cat.image}
+                                                />
+                                            </SwiperSlide>
+                                        );
+                                    })}
+                            </Swiper>
                         </TrendingTopicItemWrap>
                     </Row>
-                    <NewsletterSubscribeOne/>
+                    <NewsletterSubscribeThree />
                 </Container>
             </TrendingTopicArea>
         </BgGray1Area>
+    );
+};
 
-
-    )
-}
-
-export default TrendingTopics
+export default TrendingTopics;

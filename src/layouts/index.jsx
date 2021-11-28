@@ -3,20 +3,20 @@ import theme from "@theme";
 import { ThemeProvider } from "@theme/utils";
 import { GlobalCSS } from "@assets/css/style";
 import "@assets/css/bootstrap.css";
-import "@assets/css/gordita-fonts.css"
-import "@assets/css/icofont.min.css"
+import "@assets/css/gordita-fonts.css";
+import "@assets/css/icofont.min.css";
 import "@assets/css/modal-video.min.css";
-import Header from "./header/header-one";
-import Footer from "./footer/footer-one";
+import Header from "./header/header-five";
+import Footer from "./footer/footer-four";
 const Layout = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>
-            <Header/>
+            <Header />
             <div className="wrapper">
                 <GlobalCSS />
                 {children}
             </div>
-            <Footer/>
+            <Footer />
         </ThemeProvider>
     );
 };
