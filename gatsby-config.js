@@ -23,6 +23,7 @@ module.exports = {
     },
     flags: {
         DEV_SSR: true,
+        PRESERVE_WEBPACK_CACHE: true
     },
     mapping: {
         "MarkdownRemark.frontmatter.author": `AuthorsJson.name`,

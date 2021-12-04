@@ -5,15 +5,15 @@
 
 module.exports = {
     title: "LOKAL Directory",
-    titleTemplate: "LOKAL Directory - React MTG",
+    titleTemplate: "LOKAL Directory - Listings, Blogs and Classifieds",
     description:
-        "LOKAL Directory is LOKAL Directory",
-    author: "LOKAL Directory",
-    twitterUsername: "@LOKAL Directory",
+        "Listings, Blogs and Classifieds made easy  with lokaldirectory.com",
+    author: "LOKAL Team",
+    twitterUsername: "@LOKALDirectory",
     keywords: ["gatsby", "blog"],
     image: "banner_image.png",
     siteUrl: "https://LOKALDirectory.com",
-    pathPrefix: "/bootstrap-template",
+    pathPrefix: "/lokal",
     localUrl: "http://localhost:8000",
     canonical: "https://LOKALDirectory.com",
     social: {
@@ -23,7 +23,7 @@ module.exports = {
     },
     siteLanguage: "en",
     favicon: "src/assets/images/favicon.png", // Used for manifest favicon generation
-    shortName: "LOKAL Dir", // shortname for manifest. *Must* be shorter than 12 characters
+    shortName: "LOKALD", // shortname for manifest. *Must* be shorter than 12 characters
     themeColor: "#5E60E7",
     backgroundColor: "#fff",
 };
