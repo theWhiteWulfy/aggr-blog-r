@@ -2,30 +2,7 @@
     {
         "text": "Home",
         "link": "/",
-        "isSubmenu": true,
-        "submenu": [
-            {
-                "text": "Home Two",
-                "link": "/index-2"
-            },
-            {
-                "text": "Home Three",
-                "link": "/index-3"
-            },
-            {
-                "text": "Home Four",
-                "link": "/index-4"
-            },
-            {
-                "text": "Home Five",
-                "link": "/index-5"
-            }
-            ,
-            {
-                "text": "Home Six",
-                "link": "/index-6"
-            }
-        ]
+        "isSubmenu": false
     },
     {
         "text": "About",
@@ -35,7 +12,25 @@
     {
         "text": "Category",
         "link": "/category/food",
-        "isSubmenu": false
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "text": "Tech",
+                "link": "/about-us"
+            },
+            {
+                "text": "Cats",
+                "link": "/about-us"
+            },
+            {
+                "text": "Race",
+                "link": "/about-us"
+            },
+            {
+                "text": "Punks",
+                "link": "/about-us"
+            },
+        ]
     },
     {
         "text": "Pages",
