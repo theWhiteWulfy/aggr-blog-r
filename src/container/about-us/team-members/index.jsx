@@ -7,11 +7,7 @@ import {
 } from './style'
 
 const TeamMembersArea = () => {
-    // const teamMemberQuery = useStaticQuery(graphql`
     
-    // `)
-
-
     const teamMembersQuery = useStaticQuery(graphql`
         query TeamMembersQuery {
             teamJson(id: {eq: "team-area"}) {
