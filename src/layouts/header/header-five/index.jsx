@@ -67,7 +67,7 @@ const HeaderFive = () => {
                                 <Logo>
                                     <Link to="/">
                                         <StaticImage
-                                            src="../../../data/images/logo/logo-5-black.png"
+                                            src="../../../data/images/logo/logo.png"
                                             alt=""
                                         />
                                     </Link>
