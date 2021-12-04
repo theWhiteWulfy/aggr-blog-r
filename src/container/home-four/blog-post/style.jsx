@@ -2,10 +2,10 @@ import styled, { device } from "@theme/utils";
 
 export const RecentArticleArea = styled.div`
     padding-bottom: 60px;
-    ${device.medium}{
+    ${device.medium} {
         padding-bottom: 80px;
     }
-    ${device.large}{
+    ${device.large} {
         padding-bottom: 100px;
     }
 
@@ -13,19 +13,20 @@ export const RecentArticleArea = styled.div`
         > .col {
             flex: 1 0 100%;
             max-width: 100%;
-            &:nth-of-type(4n+2), &:nth-of-type(4n+3) {
+            &:nth-of-type(4n + 2),
+            &:nth-of-type(4n + 3) {
                 flex: 1 0 100%;
                 max-width: 100%;
             }
-            ${device.small}{
-                flex: 1 0 50.000%;
-                max-width: 50.000%;
-                &:nth-of-type(4n+2), &:nth-of-type(4n+3) {
-                    flex: 1 0 50.000%;
-                    max-width: 50.000%;
+            ${device.small} {
+                flex: 1 0 50%;
+                max-width: 50%;
+                &:nth-of-type(4n + 2),
+                &:nth-of-type(4n + 3) {
+                    flex: 1 0 50%;
+                    max-width: 50%;
                 }
             }
         }
     }
-
-`
+`;

@@ -1,25 +1,22 @@
-import styled, {device} from '@theme/utils'
+import styled, { device } from "@theme/utils";
 
 export const BgGrayColor = styled.div`
     background-color: #edf0f8;
-`
+`;
 export const TestimonialWrap = styled.div`
     padding-top: 60px;
-    ${device.medium}{
+    ${device.medium} {
         padding-top: 100px;
     }
-    ${device.large}{
-        
+    ${device.large} {
     }
-`
-export const TestimonialSliderArea = styled.div`
-
-`
+`;
+export const TestimonialSliderArea = styled.div``;
 export const TestimonialSliderNavigationTwo = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 50px;
-`
+`;
 export const NavigationButton = styled.div`
     width: 50px;
     height: 50px;
@@ -32,4 +29,4 @@ export const NavigationButton = styled.div`
     background-color: #ffc4a0;
     transition: all 0.3s ease-in-out;
     margin: 10px;
-`
+`;

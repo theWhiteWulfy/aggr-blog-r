@@ -5,7 +5,17 @@ import PropTypes from "prop-types";
 import { StyledSocial } from "./style";
 import SocialLink from "./social-link";
 
-const Social = ({ children, className, sx, dir, variant, shape, bgColor, size, space }) => {
+const Social = ({
+    children,
+    className,
+    sx,
+    dir,
+    variant,
+    shape,
+    bgColor,
+    size,
+    space,
+}) => {
     const RenderChild = Children.map(children, (el) => {
         const child = el;
         if (child !== null) {
@@ -39,10 +49,23 @@ Social.propTypes = {
     className: PropTypes.string,
     sx: PropTypes.shape({}),
     variant: PropTypes.oneOf(["contained", "outlined", "texted"]),
-    shape: PropTypes.oneOf(["square", "rounded-5", "rounded-10", "rounded-15", "oval"]),
+    shape: PropTypes.oneOf([
+        "square",
+        "rounded-5",
+        "rounded-10",
+        "rounded-15",
+        "oval",
+    ]),
     dir: PropTypes.oneOf(["horizontal", "vertical"]),
     size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
-    bgColor: PropTypes.oneOf(["default", "black", "bgWhite", "themetwo", "themethree", "transparent" ]),
+    bgColor: PropTypes.oneOf([
+        "default",
+        "black",
+        "bgWhite",
+        "themetwo",
+        "themethree",
+        "transparent",
+    ]),
     space: PropTypes.number,
 };
 
@@ -50,7 +73,7 @@ Social.defaultProps = {
     dir: "horizontal",
     size: "md",
     shape: "rounded-5",
-    bgColor: "default"
+    bgColor: "default",
 };
 
 export { SocialLink };

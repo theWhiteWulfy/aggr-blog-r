@@ -23,10 +23,10 @@ export const Navitem = styled.li`
         margin-left: 0;
     }
 
-    ${device.large}{
+    ${device.large} {
         margin: 0 15px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         margin: 0 25px;
     }
 
@@ -41,12 +41,12 @@ export const Navitem = styled.li`
         font-size: 16px;
         font-weight: 500;
         line-height: 1.18;
-        transition: all 0.0s ease-in-out;
+        transition: all 0s ease-in-out;
         &:hover,
         &.active {
             color: ${themeGet("colors.primary")};
         }
-        &[aria-current="page"]{
+        &[aria-current="page"] {
             color: ${themeGet("colors.primary")} !important;
         }
     }
@@ -59,7 +59,7 @@ export const Navitem = styled.li`
             &::after {
                 position: static;
                 margin-left: 5px;
-                font-family: IcoFont!important;
+                font-family: IcoFont !important;
                 content: "\\ea99";
                 font-size: 16px;
                 vertical-align: middle;

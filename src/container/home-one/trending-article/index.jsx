@@ -1,23 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Container, Row, Col } from 'react-bootstrap'
-import {graphql, useStaticQuery } from "gatsby";
-import TrendingSingleItems from '../../../components/trending-article-item';
-import TrendingSingleLargeItems from '../../../components/trending-article-large-item';
-import { 
+import React from "react";
+import PropTypes from "prop-types";
+import { Container, Row, Col } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
+import TrendingSingleItems from "../../../components/trending-article-item";
+import TrendingSingleLargeItems from "../../../components/trending-article-large-item";
+import {
     TrendingArticleArea,
     TrendingArticleRow,
     TrendingArticleLeftSide,
-    TrendingArticleRightSide
+    TrendingArticleRightSide,
 } from "./style";
 
-
-const TredingArticle = props => {
+const TredingArticle = (props) => {
     const tredingArticleQuery = useStaticQuery(graphql`
         query TredingArticleQueryQuery {
             smallTredingArticle: allMarkdownRemark(
-                sort: {fields: [frontmatter___date], order: DESC},
-                filter: {frontmatter: {is_trending_article: {eq: true}}},
+                sort: { fields: [frontmatter___date], order: DESC }
+                filter: { frontmatter: { is_trending_article: { eq: true } } }
                 limit: 3
             ) {
                 edges {
@@ -33,12 +32,22 @@ const TredingArticle = props => {
                             date(formatString: "DD-MM-YYYY")
                             smallImage: thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 100, height: 169, layout: CONSTRAINED, quality: 100)
+                                    gatsbyImageData(
+                                        width: 100
+                                        height: 169
+                                        layout: CONSTRAINED
+                                        quality: 100
+                                    )
                                 }
                             }
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 160, height: 160, layout: CONSTRAINED, quality: 100)
+                                    gatsbyImageData(
+                                        width: 160
+                                        height: 160
+                                        layout: CONSTRAINED
+                                        quality: 100
+                                    )
                                 }
                             }
                         }
@@ -52,11 +61,11 @@ const TredingArticle = props => {
                 }
             }
             largeTredingArticle: allMarkdownRemark(
-                sort: {fields: [frontmatter___date], order: DESC},
-                filter: {frontmatter: {is_trending_article: {eq: true}}},
-                limit: 3,
+                sort: { fields: [frontmatter___date], order: DESC }
+                filter: { frontmatter: { is_trending_article: { eq: true } } }
+                limit: 3
                 skip: 3
-              ) {
+            ) {
                 edges {
                     node {
                         id
@@ -70,12 +79,22 @@ const TredingArticle = props => {
                             }
                             smallImage: thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 100, height: 169, layout: CONSTRAINED, quality: 100)
+                                    gatsbyImageData(
+                                        width: 100
+                                        height: 169
+                                        layout: CONSTRAINED
+                                        quality: 100
+                                    )
                                 }
                             }
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 315, height: 160, layout: CONSTRAINED, quality: 100)
+                                    gatsbyImageData(
+                                        width: 315
+                                        height: 160
+                                        layout: CONSTRAINED
+                                        quality: 100
+                                    )
                                 }
                             }
                         }
@@ -88,12 +107,13 @@ const TredingArticle = props => {
                     }
                 }
             }
-            
         }
     `);
-    
-    const smalltredingArticleData = tredingArticleQuery.smallTredingArticle.edges;
-    const largetredingArticleData = tredingArticleQuery.largeTredingArticle.edges;
+
+    const smalltredingArticleData =
+        tredingArticleQuery.smallTredingArticle.edges;
+    const largetredingArticleData =
+        tredingArticleQuery.largeTredingArticle.edges;
 
     return (
         <TrendingArticleArea>
@@ -109,60 +129,123 @@ const TredingArticle = props => {
                     <Col lg={12}>
                         <TrendingArticleRow>
                             <TrendingArticleLeftSide>
-                                {smalltredingArticleData && smalltredingArticleData.map((item, index) => {
-                                    return (
-                                        <TrendingSingleItems
-                                            key={`trending-${index}`}
-                                            title={item.node.frontmatter.title}
-                                            thume_image={item.node.frontmatter.thume_image}
-                                            small_image={item.node.frontmatter.smallImage}
-                                            categories={item.node.frontmatter.categories}
-                                            slug={item.node.fields.slug}
-                                            authorSlug={item.node.fields.authorId}
-                                            authorId={item.node.fields.authorId}
-                                            postAuthor={item.node.frontmatter.author}
-                                            body={item.node.excerpt}
-                                            date={item.node.frontmatter.date}
-                                            dateSlug={item.node.fields.dateSlug}
-                                        />
-                                    );
-                                })}
+                                {smalltredingArticleData &&
+                                    smalltredingArticleData.map(
+                                        (item, index) => {
+                                            return (
+                                                <TrendingSingleItems
+                                                    key={`trending-${index}`}
+                                                    title={
+                                                        item.node.frontmatter
+                                                            .title
+                                                    }
+                                                    thume_image={
+                                                        item.node.frontmatter
+                                                            .thume_image
+                                                    }
+                                                    small_image={
+                                                        item.node.frontmatter
+                                                            .smallImage
+                                                    }
+                                                    categories={
+                                                        item.node.frontmatter
+                                                            .categories
+                                                    }
+                                                    slug={item.node.fields.slug}
+                                                    authorSlug={
+                                                        item.node.fields
+                                                            .authorId
+                                                    }
+                                                    authorId={
+                                                        item.node.fields
+                                                            .authorId
+                                                    }
+                                                    postAuthor={
+                                                        item.node.frontmatter
+                                                            .author
+                                                    }
+                                                    body={item.node.excerpt}
+                                                    date={
+                                                        item.node.frontmatter
+                                                            .date
+                                                    }
+                                                    dateSlug={
+                                                        item.node.fields
+                                                            .dateSlug
+                                                    }
+                                                />
+                                            );
+                                        }
+                                    )}
                             </TrendingArticleLeftSide>
 
                             <TrendingArticleRightSide>
-
-                                {largetredingArticleData && largetredingArticleData.map((followingBlog, i) => {
-                                    return (
-                                        <TrendingSingleLargeItems
-                                            key={`largetrending-${i}`}
-                                            title={followingBlog.node.frontmatter.title}
-                                            thume_image={followingBlog.node.frontmatter.thume_image}
-                                            small_image={followingBlog.node.frontmatter.smallImage}
-                                            categories={followingBlog.node.frontmatter.categories}
-                                            slug={followingBlog.node.fields.slug}
-                                            authorSlug={followingBlog.node.fields.authorId}
-                                            authorId={followingBlog.node.fields.authorId}
-                                            postAuthor={followingBlog.node.frontmatter.author}
-                                            body={followingBlog.node.excerpt}
-                                            date={followingBlog.node.frontmatter.date}
-                                            dateSlug={followingBlog.node.fields.dateSlug}
-                                        />
-                                    );
-                                })}
-
+                                {largetredingArticleData &&
+                                    largetredingArticleData.map(
+                                        (followingBlog, i) => {
+                                            return (
+                                                <TrendingSingleLargeItems
+                                                    key={`largetrending-${i}`}
+                                                    title={
+                                                        followingBlog.node
+                                                            .frontmatter.title
+                                                    }
+                                                    thume_image={
+                                                        followingBlog.node
+                                                            .frontmatter
+                                                            .thume_image
+                                                    }
+                                                    small_image={
+                                                        followingBlog.node
+                                                            .frontmatter
+                                                            .smallImage
+                                                    }
+                                                    categories={
+                                                        followingBlog.node
+                                                            .frontmatter
+                                                            .categories
+                                                    }
+                                                    slug={
+                                                        followingBlog.node
+                                                            .fields.slug
+                                                    }
+                                                    authorSlug={
+                                                        followingBlog.node
+                                                            .fields.authorId
+                                                    }
+                                                    authorId={
+                                                        followingBlog.node
+                                                            .fields.authorId
+                                                    }
+                                                    postAuthor={
+                                                        followingBlog.node
+                                                            .frontmatter.author
+                                                    }
+                                                    body={
+                                                        followingBlog.node
+                                                            .excerpt
+                                                    }
+                                                    date={
+                                                        followingBlog.node
+                                                            .frontmatter.date
+                                                    }
+                                                    dateSlug={
+                                                        followingBlog.node
+                                                            .fields.dateSlug
+                                                    }
+                                                />
+                                            );
+                                        }
+                                    )}
                             </TrendingArticleRightSide>
-
                         </TrendingArticleRow>
-
                     </Col>
                 </Row>
             </Container>
         </TrendingArticleArea>
-    )
-}
+    );
+};
 
-TredingArticle.propTypes = {
+TredingArticle.propTypes = {};
 
-}
-
-export default TredingArticle
+export default TredingArticle;

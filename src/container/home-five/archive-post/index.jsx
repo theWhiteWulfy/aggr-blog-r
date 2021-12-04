@@ -1,17 +1,15 @@
-import React from 'react'
-import {graphql, useStaticQuery } from "gatsby";
-import SideLatestPosts from '../../../components/side-latest-post';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import SideLatestPosts from "../../../components/side-latest-post";
 import {
     ArchivePostInnerWrap,
     ArchivePostHeader,
-    ArchivePostBox
+    ArchivePostBox,
 } from "./style";
 const ArchivePostArea = () => {
     const archivePostsQuery = useStaticQuery(graphql`
         query ArchivePostsQuery {
-            latestPost: allMarkdownRemark(
-                limit: 5
-              ) {
+            latestPost: allMarkdownRemark(limit: 5) {
                 edges {
                     node {
                         id
@@ -22,7 +20,11 @@ const ArchivePostArea = () => {
                             is_featured
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 84, height: 84, quality: 100)
+                                    gatsbyImageData(
+                                        width: 84
+                                        height: 84
+                                        quality: 100
+                                    )
                                 }
                             }
                         }
@@ -33,7 +35,6 @@ const ArchivePostArea = () => {
                     }
                 }
             }
-            
         }
     `);
     const archivePostsData = archivePostsQuery.latestPost.edges;
@@ -42,26 +43,28 @@ const ArchivePostArea = () => {
         <ArchivePostInnerWrap>
             <ArchivePostHeader>
                 <div className="section-title">
-                    <h3>Archive  Post</h3>
+                    <h3>Archive Post</h3>
                 </div>
             </ArchivePostHeader>
             <ArchivePostBox>
-                {archivePostsData && archivePostsData.map((latestPosts, i) => {
-                    return ( 
-                        <SideLatestPosts
-                            key={i}
-                            title={latestPosts.node.frontmatter.title}
-                            thume_image={latestPosts.node.frontmatter.thume_image}
-                            date={latestPosts.node.frontmatter.date}
-                            dateSlug={latestPosts.node.fields.dateSlug}
-                            slug={latestPosts.node.fields.slug}
-                        />
-                    );
-                })}
+                {archivePostsData &&
+                    archivePostsData.map((latestPosts, i) => {
+                        return (
+                            <SideLatestPosts
+                                key={i}
+                                title={latestPosts.node.frontmatter.title}
+                                thume_image={
+                                    latestPosts.node.frontmatter.thume_image
+                                }
+                                date={latestPosts.node.frontmatter.date}
+                                dateSlug={latestPosts.node.fields.dateSlug}
+                                slug={latestPosts.node.fields.slug}
+                            />
+                        );
+                    })}
             </ArchivePostBox>
         </ArchivePostInnerWrap>
-    )
-}
+    );
+};
 
-
-export default ArchivePostArea
+export default ArchivePostArea;

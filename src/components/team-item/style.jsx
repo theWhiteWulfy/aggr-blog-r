@@ -1,4 +1,4 @@
-import styled, {device} from '@theme/utils'
+import styled, { device } from "@theme/utils";
 
 export const SingleTeamArea = styled.div`
     position: relative;
@@ -10,13 +10,12 @@ export const SingleTeamArea = styled.div`
             visibility: visible;
         }
     }
-    
-`
+`;
 export const TeamThum = styled.div`
     img {
         width: 100%;
     }
-`
+`;
 export const TeamContent = styled.div`
     opacity: 0;
     visibility: hidden;
@@ -30,18 +29,20 @@ export const TeamContent = styled.div`
     text-align: center;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 0, rgba(253, 195, 158, 0.9) 100%);
-`
-export const TeamShareTop = styled.div`
-    
-`
+    background: -webkit-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 0.9) 0,
+        rgba(253, 195, 158, 0.9) 100%
+    );
+`;
+export const TeamShareTop = styled.div``;
 export const TeamMemberInfo = styled.div`
     margin-bottom: 20px;
-`
+`;
 
 export const NameTitle = styled.h6`
     color: #ffffff;
-`
+`;
 export const Desination = styled.p`
     color: #ffc4a0;
-`
+`;

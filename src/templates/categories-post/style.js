@@ -14,13 +14,13 @@ export const BlogDetailsArea = styled.section`
 `;
 export const TagTitle = styled.h3`
     margin-bottom: 30px;
-`
+`;
 export const BlogDetailsRightSidebar = styled.div`
     margin-left: 0;
-    ${device.xlarge}{
+    ${device.xlarge} {
         margin-left: 40px;
     }
-`
+`;
 export const BlogAddBanner = styled.div`
     a {
         display: block;
@@ -28,4 +28,4 @@ export const BlogAddBanner = styled.div`
             width: 100% !important;
         }
     }
-`
+`;

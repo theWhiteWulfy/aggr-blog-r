@@ -1,10 +1,7 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import NewsletterSubscribeFour from '../../../components/newsletter-subscribe-four'
-import {
-    NewsletterArea
-} from "./style"
-
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import NewsletterSubscribeFour from "../../../components/newsletter-subscribe-four";
+import { NewsletterArea } from "./style";
 
 const Newsletter = () => {
     return (
@@ -12,12 +9,12 @@ const Newsletter = () => {
             <Container>
                 <Row>
                     <Col>
-                        <NewsletterSubscribeFour/>
+                        <NewsletterSubscribeFour />
                     </Col>
                 </Row>
             </Container>
         </NewsletterArea>
-    )
-}
+    );
+};
 
-export default Newsletter
+export default Newsletter;

@@ -9,9 +9,7 @@ export const BlogDetailsArea = styled.section`
         padding: 120px 0;
     }
 `;
-export const PostDetailsContentWrap = styled.div`
-    
-`;
+export const PostDetailsContentWrap = styled.div``;
 export const PostDetailsBody = styled.div``;
 
 export const Thumb = styled.div`
@@ -26,8 +24,6 @@ export const Thumb = styled.div`
 
 export const Content = styled.div``;
 
-
-
 export const BlogDetailsMetaBox = styled.div`
     margin-top: 20px;
     margin-bottom: 15px;
@@ -36,7 +32,7 @@ export const BlogDetailsMetaBox = styled.div`
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    ${device.small}{
+    ${device.small} {
         flex-direction: row;
     }
 `;
@@ -46,14 +42,12 @@ export const PostMetaLeftSide = styled.div`
     align-items: center;
     margin-bottom: 10px;
     width: 100%;
-    ${device.small}{
+    ${device.small} {
         width: auto;
     }
 `;
 
-export const BlogDetailsPostAuthor = styled.div`
-    
-`;
+export const BlogDetailsPostAuthor = styled.div``;
 export const PostMidSide = styled.div`
     display: flex;
     align-items: center;
@@ -125,15 +119,12 @@ export const PostMetaRightSide = styled.div`
     }
 `;
 
-
-
-
 export const Title = styled.h3`
     margin-bottom: 15px;
 `;
 
 export const SingleBlogContent = styled.div`
-    blockquote{
+    blockquote {
         background-color: #fafafa;
         padding: 60px 60px;
         text-align: center;
@@ -170,7 +161,7 @@ export const CategorySocialContent = styled.div`
     margin-top: 41px;
     padding-bottom: 20px;
     flex-direction: column;
-    ${device.small}{
+    ${device.small} {
         flex-direction: row;
     }
 `;
@@ -198,7 +189,6 @@ export const CommentArea = styled.div`
     ${device.large} {
         padding-top: 54px;
     }
-
 `;
 
 export const CommentTitle = styled.h4``;

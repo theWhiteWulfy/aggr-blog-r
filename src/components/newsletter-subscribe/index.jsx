@@ -1,7 +1,7 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { StaticImage} from "gatsby-plugin-image";
-import Button from "../../components/shared/button"
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
+import Button from "../../components/shared/button";
 import {
     NewsletterSubscribeInner,
     Title,
@@ -9,11 +9,8 @@ import {
     NewsletterInputBox,
     NewsletterInput,
     ButtonBox,
-    NewsletterInnerImage
-
+    NewsletterInnerImage,
 } from "./style";
-
-
 
 const NewsletterSubscribeOne = () => {
     return (
@@ -26,27 +23,33 @@ const NewsletterSubscribeOne = () => {
                 </Col>
                 <Col lg={9}>
                     <NewsletterInputBox>
-                        <NewsletterInput 
-                            type="text" 
+                        <NewsletterInput
+                            type="text"
                             placeholder="Enter your email"
                         />
                         <ButtonBox>
-                            <Button
-                                path="/"
-                                size="large"
-                                color="primary"
-                            > Subscribe Now
+                            <Button path="/" size="large" color="primary">
+                                {" "}
+                                Subscribe Now
                             </Button>
                         </ButtonBox>
                     </NewsletterInputBox>
                 </Col>
             </Row>
             <NewsletterInnerImage>
-                <StaticImage className="newsletter-image-01" src="../../data/images/shap/1-newsletter.png" alt=""/>
-                <StaticImage className="newsletter-image-02" src="../../data/images/shap/2-newsletter.png" alt=""/>
+                <StaticImage
+                    className="newsletter-image-01"
+                    src="../../data/images/shap/1-newsletter.png"
+                    alt=""
+                />
+                <StaticImage
+                    className="newsletter-image-02"
+                    src="../../data/images/shap/2-newsletter.png"
+                    alt=""
+                />
             </NewsletterInnerImage>
         </NewsletterSubscribeInner>
-    )
-}
+    );
+};
 
-export default NewsletterSubscribeOne
+export default NewsletterSubscribeOne;

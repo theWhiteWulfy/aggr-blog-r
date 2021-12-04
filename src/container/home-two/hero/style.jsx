@@ -19,15 +19,15 @@ export const HeroTwoArea = styled.div`
     display: flex;
     align-items: center;
     background-color: #091d40;
-    ${device.medium}{
+    ${device.medium} {
         height: 700px;
         padding: 100px 0 0px;
     }
-    ${device.large}{
+    ${device.large} {
         height: 850px;
     }
     &::before {
-        content: '';
+        content: "";
         background-color: rgba(15, 0, 84, 0.7);
         height: 100%;
         width: 100%;
@@ -50,10 +50,10 @@ export const Title = styled.h1`
     color: ${themeGet("colors.white")};
     font-weight: bold;
     font-size: 45px;
-    ${device.medium}{
+    ${device.medium} {
         font-size: 65px;
     }
-    ${device.large}{
+    ${device.large} {
         font-size: 95px;
     }
 `;
@@ -61,17 +61,17 @@ export const SubTitle = styled.h2`
     font-size: 30px;
     color: ${themeGet("colors.white")};
     font-weight: bold;
-    ${device.medium}{
+    ${device.medium} {
         font-size: 40px;
     }
-    ${device.large}{
+    ${device.large} {
         font-size: 60px;
     }
 `;
 export const HeroTwoTag = styled.div`
     max-width: 750px;
     margin: 30px auto 0;
-    ${device.large}{
+    ${device.large} {
         margin: 60px auto 0;
     }
     a {

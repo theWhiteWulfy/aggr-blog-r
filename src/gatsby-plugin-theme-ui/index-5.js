@@ -24,14 +24,14 @@ const theme = {
         red: "#FF0000",
         alabaster: "#fafafa",
         mystic: "#e1e8ed",
-        facebook: "#3b5998"
+        facebook: "#3b5998",
     },
     fontSize: {
         body: "15px",
         h1: ["28px", "30px", "44px", "50px"],
-        h2: ["26px", "30px", "32px","38px"],
+        h2: ["26px", "30px", "32px", "38px"],
         h3: ["20px", "20px", "22px", "24px"],
-        h4: ["18px", "18px","18px","20px"],
+        h4: ["18px", "18px", "18px", "20px"],
         h5: ["16px", "18px"],
         h6: ["16px", "16px"],
     },

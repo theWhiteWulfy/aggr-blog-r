@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import Button from "../../components/shared/button"
+import Button from "../../components/shared/button";
 import {
     NewsletterSubscribeInner,
     Title,
@@ -8,33 +8,42 @@ import {
     NewsletterInputBox,
     ButtonBox,
     SubscribeTodayUpdate,
-    TodayUpdateText
+    TodayUpdateText,
 } from "./style";
-
 
 const NewsletterSubscribeThree = () => {
     return (
         <NewsletterSubscribeInner>
             <NewsletterInputBox>
                 <SectionTitle>
-                    <Title>28k People <span className="normal-width">Receive Weekly WordPress Related Newsletter</span>.</Title>
+                    <Title>
+                        28k People{" "}
+                        <span className="normal-width">
+                            Receive Weekly WordPress Related Newsletter
+                        </span>
+                        .
+                    </Title>
                 </SectionTitle>
                 <ButtonBox>
                     <Button
-                        sx={{mt: "30px", color: "#fff" }}
+                        sx={{ mt: "30px", color: "#fff" }}
                         path="/"
                         size="large"
                         color="secondary"
                         shape="rounded-10"
-                    > Subscribe Now
+                    >
+                        {" "}
+                        Subscribe Now
                     </Button>
                 </ButtonBox>
             </NewsletterInputBox>
             <SubscribeTodayUpdate>
-                <TodayUpdateText><span>93+</span> People Subscribe today.</TodayUpdateText>
+                <TodayUpdateText>
+                    <span>93+</span> People Subscribe today.
+                </TodayUpdateText>
             </SubscribeTodayUpdate>
         </NewsletterSubscribeInner>
-    )
-}
+    );
+};
 
-export default NewsletterSubscribeThree
+export default NewsletterSubscribeThree;

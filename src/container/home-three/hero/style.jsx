@@ -1,5 +1,5 @@
 import styled, { device } from "@theme/utils";
-import HeroThreeBg from "../../../data/images/hero/home-3-hero-bg.jpg"
+import HeroThreeBg from "../../../data/images/hero/home-3-hero-bg.jpg";
 
 export const HeroAreaThree = styled.div`
     background-image: url(${HeroThreeBg});

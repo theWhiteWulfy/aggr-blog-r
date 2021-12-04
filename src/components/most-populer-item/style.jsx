@@ -1,4 +1,4 @@
-import styled, {themeGet, device } from "@theme/utils";
+import styled, { themeGet, device } from "@theme/utils";
 
 export const SingleMostPopulerItem = styled.div`
     margin-top: 30px;
@@ -8,10 +8,10 @@ export const SingleMostPopulerItem = styled.div`
             border-radius: 15px;
         }
     }
-` 
+`;
 export const MostPopulerContent = styled.div`
     margin-top: 25px;
-` 
+`;
 export const Author = styled.div`
     color: #9b9ea1;
     font-weight: 600;
@@ -19,12 +19,12 @@ export const Author = styled.div`
         text-transform: capitalize;
         color: ${themeGet("color.primary")};
     }
-` 
+`;
 export const Title = styled.h3`
-    margin-top: 10px;  
-` 
+    margin-top: 10px;
+`;
 export const PostMeta = styled.div`
-    & span{
+    & span {
         position: relative;
         padding-right: 14px;
         margin-right: 10px;
@@ -49,11 +49,6 @@ export const PostMeta = styled.div`
             }
         }
     }
-    
-` 
-export const PostDate = styled.span`
-   
-` 
-export const PostReadTime = styled.span`
-    
-` 
+`;
+export const PostDate = styled.span``;
+export const PostReadTime = styled.span``;

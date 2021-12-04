@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 import {
     StayInTouchArea,
     StayInTouchBox,
     SingleTouchCol,
-
     SingleTouch,
     TouchSocailIcon,
-    TouchTitle
-
-
-} from './style'
+    TouchTitle,
+} from "./style";
 
 const StayInTouchs = () => {
     return (
@@ -66,10 +63,9 @@ const StayInTouchs = () => {
                         <TouchTitle>5,685K</TouchTitle>
                     </SingleTouch>
                 </SingleTouchCol>
-                
             </StayInTouchBox>
         </StayInTouchArea>
-    )
-}
+    );
+};
 
-export default StayInTouchs
+export default StayInTouchs;

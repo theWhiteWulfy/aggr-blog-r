@@ -7,30 +7,24 @@ export const NewsletterSubscribeInner = styled.div`
     position: relative;
     overflow: hidden;
     margin-top: 60px;
-    ${device.small}{
+    ${device.small} {
         margin-top: 80px;
     }
-    ${device.medium}{
+    ${device.medium} {
         padding: 70px 70px;
     }
-
-
-`
-export const Title = styled.h3`
-
-`
-export const SectionTitle = styled.div`
-
-`
+`;
+export const Title = styled.h3``;
+export const SectionTitle = styled.div``;
 export const NewsletterInputBox = styled.div`
     display: flex;
     z-index: 1;
     position: relative;
     flex-direction: column;
-    ${device.small}{
+    ${device.small} {
         flex-direction: row;
     }
-`
+`;
 export const NewsletterInput = styled.input`
     max-width: 100%;
     width: 100%;
@@ -43,27 +37,24 @@ export const NewsletterInput = styled.input`
     margin-top: 30px;
     margin-bottom: 20px;
 
-    ${device.small}{
+    ${device.small} {
         max-width: 270px;
         margin-top: 0px;
         margin-bottom: 0px;
     }
 
-    ${device.medium}{
+    ${device.medium} {
         max-width: 300px;
     }
 
-    ${device.large}{
+    ${device.large} {
         max-width: 400px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         max-width: 450px;
     }
-
-`
-export const ButtonBox = styled.div`
-
-`
+`;
+export const ButtonBox = styled.div``;
 export const NewsletterInnerImage = styled.div`
     .newsletter-image-01 {
         position: absolute !important;
@@ -77,4 +68,4 @@ export const NewsletterInnerImage = styled.div`
         right: 34px;
         z-index: 0;
     }
-`
+`;

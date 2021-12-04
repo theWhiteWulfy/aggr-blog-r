@@ -1,11 +1,9 @@
 import styled, { device, themeGet } from "@theme/utils";
 
-export const Form = styled.form`
-    
-`
+export const Form = styled.form``;
 export const SingleInputBox = styled.div`
     margin-bottom: 20px;
-`
+`;
 export const Input = styled.input`
     border: 1px solid #efefef;
     width: 100%;
@@ -14,7 +12,7 @@ export const Input = styled.input`
     background-color: #fafafa;
     font-weight: 500;
     height: 50px;
-`
+`;
 export const Textarea = styled.textarea`
     border: 1px solid #efefef;
     width: 100%;
@@ -23,4 +21,4 @@ export const Textarea = styled.textarea`
     background-color: #fafafa;
     font-weight: 500;
     height: 200px;
-`
+`;

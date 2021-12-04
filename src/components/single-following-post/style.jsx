@@ -1,19 +1,15 @@
 import styled, { device } from "@theme/utils";
 
-
-
 export const SingleFollowingPost = styled.div`
     margin-bottom: 40px;
-`
+`;
 export const FollowingPostThum = styled.div`
     display: block;
     img {
         border-radius: 15px;
     }
-`
-export const FollowingPostContent = styled.div`
-    
-`
+`;
+export const FollowingPostContent = styled.div``;
 export const FollowingBlogPostTop = styled.div`
     display: -webkit-box;
     display: -webkit-flex;
@@ -25,19 +21,19 @@ export const FollowingBlogPostTop = styled.div`
     align-items: center;
     margin-bottom: 15px;
     margin-top: 25px;
-`
+`;
 export const FollowingBlogPostCategory = styled.div`
     margin-right: 25px;
-`
+`;
 export const FollowingBlogPostAuthor = styled.div`
     color: #9b9ea1;
     a {
         color: #000000;
     }
-`
+`;
 export const FollowingBlogPostTitle = styled.h5`
     margin-bottom: 15px;
-`
+`;
 export const FollowingBlogPostMeta = styled.div`
     display: -webkit-box;
     display: -webkit-flex;
@@ -51,15 +47,13 @@ export const FollowingBlogPostMeta = styled.div`
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-`
-export const PostMetaLeftSide = styled.div`
-    
-`
+`;
+export const PostMetaLeftSide = styled.div``;
 export const PostMetaRightSide = styled.div`
     a {
         margin-left: 10px;
     }
-`
+`;
 export const PostDate = styled.span`
     position: relative;
     padding-right: 14px;
@@ -81,7 +75,7 @@ export const PostDate = styled.span`
     i {
         margin-right: 4px;
     }
-`
+`;
 export const PostReadTime = styled.span`
     font-size: 13px;
-`
+`;

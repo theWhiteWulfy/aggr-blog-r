@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import {
     SingleFollowItem,
     ItemLink,
     FollowSocailIcon,
     SocailTitle,
-    FollowShareOnover
-} from './style'
+    FollowShareOnover,
+} from "./style";
 
-const FollowUsItem = ({socailIcon, title, number, path }) => {
+const FollowUsItem = ({ socailIcon, title, number, path }) => {
     return (
         <SingleFollowItem>
             <ItemLink href={path}>
@@ -21,8 +21,7 @@ const FollowUsItem = ({socailIcon, title, number, path }) => {
                 </FollowShareOnover>
             </ItemLink>
         </SingleFollowItem>
-        
-    )
-}
+    );
+};
 
-export default FollowUsItem
+export default FollowUsItem;

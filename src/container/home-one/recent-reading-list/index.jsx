@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import SingleRecentReading from '../../../components/single-recent-reading'
+import SingleRecentReading from "../../../components/single-recent-reading";
 
 const RecentReadingList = () => {
     return (
@@ -13,16 +13,23 @@ const RecentReadingList = () => {
                                 <h3>Recent Reading List</h3>
                             </div>
                             <div className="recent-reading-slider-navigation mt-2 mb-2">
-                                <div className="recent-reading-button-prev navigation-button"><i className="icofont-long-arrow-left"></i></div>
-                                <div className="recent-reading-button-next navigation-button"><i className="icofont-long-arrow-right"></i></div>
+                                <div className="recent-reading-button-prev navigation-button">
+                                    <i className="icofont-long-arrow-left"></i>
+                                </div>
+                                <div className="recent-reading-button-next navigation-button">
+                                    <i className="icofont-long-arrow-right"></i>
+                                </div>
                             </div>
                             <div className="recent-article-date">
-                                <span>View by Date</span> <a className="date-button" href="#"><i className="icofont-ui-calendar"></i></a>
+                                <span>View by Date</span>{" "}
+                                <a className="date-button" href="#">
+                                    <i className="icofont-ui-calendar"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                        
+
                 <Swiper
                     layout={{
                         nav: "trending-topic-slider-navigation",
@@ -30,19 +37,18 @@ const RecentReadingList = () => {
                     }}
                     navigation={{
                         nextEl: ".trending-topic-button-next",
-                        prevEl: ".trending-topic-button-prev"
+                        prevEl: ".trending-topic-button-prev",
                     }}
                     slidesPerView={3}
                     spaceBetween={35}
                 >
-                    <SwiperSlide >
-                        <SingleRecentReading/>
+                    <SwiperSlide>
+                        <SingleRecentReading />
                     </SwiperSlide>
-                                
                 </Swiper>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default RecentReadingList
+export default RecentReadingList;

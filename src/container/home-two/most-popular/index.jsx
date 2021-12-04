@@ -1,21 +1,21 @@
-import React from 'react'
+import React from "react";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import { graphql, useStaticQuery } from 'gatsby';
-import MostPopulerItem from '@components/most-populer-item';
-import { Container, Row, Col } from 'react-bootstrap';
+import { graphql, useStaticQuery } from "gatsby";
+import MostPopulerItem from "@components/most-populer-item";
+import { Container, Row, Col } from "react-bootstrap";
 import {
     MostPopulerArea,
     SectionTitleWrap,
     SectionTitle,
     MostPopularSliderNavigation,
-    NavigationButton
-} from './style'
+    NavigationButton,
+} from "./style";
 
 const MostPopularArea = () => {
     const tredingArticleTwoQuery = useStaticQuery(graphql`
         query TredingArticleTwoQuery {
             tredingArticletwo: allMarkdownRemark(
-                filter: {frontmatter: {is_trending_article: {eq: true}}}
+                filter: { frontmatter: { is_trending_article: { eq: true } } }
             ) {
                 edges {
                     node {
@@ -25,7 +25,11 @@ const MostPopularArea = () => {
                             date
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 372, height: 272, quality: 100)
+                                    gatsbyImageData(
+                                        width: 372
+                                        height: 272
+                                        quality: 100
+                                    )
                                 }
                             }
                         }
@@ -36,10 +40,10 @@ const MostPopularArea = () => {
                         }
                     }
                 }
-            } 
+            }
         }
     `);
-    
+
     const tredingArticleData = tredingArticleTwoQuery.tredingArticletwo.edges;
 
     return (
@@ -69,9 +73,9 @@ const MostPopularArea = () => {
                     }}
                     navigation={{
                         nextEl: ".most-populer-button-next",
-                        prevEl: ".most-populer-button-prev"
+                        prevEl: ".most-populer-button-prev",
                     }}
-                    centeredSlides= {false}
+                    centeredSlides={false}
                     slidesPerView={3}
                     spaceBetween={30}
                     breakpoints={{
@@ -89,25 +93,30 @@ const MostPopularArea = () => {
                         },
                     }}
                 >
-                    {tredingArticleData && tredingArticleData.map((item, index) => {
-                        return (
-                            <SwiperSlide key={`most-populer-${index}`}>
-                                <MostPopulerItem
-                                    title={item.node.frontmatter.title}
-                                    thume_image={item.node.frontmatter.thume_image}
-                                    slug={item.node.fields.slug}
-                                    authorId={item.node.fields.authorId}
-                                    postAuthor={item.node.frontmatter.author}
-                                    date={item.node.frontmatter.date}
-                                    dateSlug={item.node.fields.dateSlug}
-                                />
-                            </SwiperSlide>
-                        );
-                    })}
+                    {tredingArticleData &&
+                        tredingArticleData.map((item, index) => {
+                            return (
+                                <SwiperSlide key={`most-populer-${index}`}>
+                                    <MostPopulerItem
+                                        title={item.node.frontmatter.title}
+                                        thume_image={
+                                            item.node.frontmatter.thume_image
+                                        }
+                                        slug={item.node.fields.slug}
+                                        authorId={item.node.fields.authorId}
+                                        postAuthor={
+                                            item.node.frontmatter.author
+                                        }
+                                        date={item.node.frontmatter.date}
+                                        dateSlug={item.node.fields.dateSlug}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })}
                 </Swiper>
             </Container>
         </MostPopulerArea>
-    )
-}
+    );
+};
 
-export default MostPopularArea
+export default MostPopularArea;

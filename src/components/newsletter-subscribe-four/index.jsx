@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import Button from "../../components/shared/button"
+import Button from "../../components/shared/button";
 import {
     NewsletterSubscribeInner,
     Title,
@@ -8,9 +8,8 @@ import {
     DecText,
     NewsletterInputBox,
     ButtonBox,
-    NewsletterInput
+    NewsletterInput,
 } from "./style";
-
 
 const NewsletterSubscribeFour = () => {
     return (
@@ -20,21 +19,16 @@ const NewsletterSubscribeFour = () => {
                 <DecText>93+ People Subscribe today.</DecText>
             </SectionTitle>
             <NewsletterInputBox>
-                <NewsletterInput 
-                    type="text" 
-                    placeholder="Enter your email"
-                />
+                <NewsletterInput type="text" placeholder="Enter your email" />
                 <ButtonBox>
-                    <Button
-                        path="/"
-                        size="large"
-                        color="primary"
-                    > Subscribe Now
+                    <Button path="/" size="large" color="primary">
+                        {" "}
+                        Subscribe Now
                     </Button>
                 </ButtonBox>
             </NewsletterInputBox>
         </NewsletterSubscribeInner>
-    )
-}
+    );
+};
 
-export default NewsletterSubscribeFour
+export default NewsletterSubscribeFour;

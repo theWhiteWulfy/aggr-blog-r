@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link } from "gatsby";
+import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleLatestPost,
@@ -7,17 +7,16 @@ import {
     LatestPostContent,
     Title,
     LatestPostMeta,
-    PostDate
-} from './style'
+    PostDate,
+} from "./style";
 
-
-const SideLatestPosts = ({title,date,thume_image,slug, dateSlug }) => {
+const SideLatestPosts = ({ title, date, thume_image, slug, dateSlug }) => {
     const image = getImage(thume_image);
     return (
         <SingleLatestPost>
             <LatestPostThum>
                 <Link to={`/${slug}`}>
-                    <GatsbyImage image={image} alt=""/>
+                    <GatsbyImage image={image} alt="" />
                 </Link>
             </LatestPostThum>
             <LatestPostContent>
@@ -26,13 +25,13 @@ const SideLatestPosts = ({title,date,thume_image,slug, dateSlug }) => {
                 </Title>
                 <LatestPostMeta>
                     <PostDate>
-                        <i className="icofont-ui-calendar"></i> 
+                        <i className="icofont-ui-calendar"></i>
                         <Link to={`/date/${dateSlug}`}>{date}</Link>
                     </PostDate>
                 </LatestPostMeta>
             </LatestPostContent>
         </SingleLatestPost>
-    )
-}
+    );
+};
 
-export default SideLatestPosts
+export default SideLatestPosts;

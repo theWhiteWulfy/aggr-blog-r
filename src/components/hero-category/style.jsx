@@ -1,27 +1,26 @@
 import styled, { device, themeGet } from "@theme/utils";
 
-
 export const SingleHeroCategoryItem = styled.div`
     a {
         display: block;
         margin-bottom: 0;
         margin-top: 35px;
         position: relative;
-        ${device.small}{
+        ${device.small} {
             margin-top: 0px;
             margin-bottom: 28px;
         }
-        ${device.medium}{
+        ${device.medium} {
             margin-top: 0px;
             margin-bottom: 25px;
         }
-        ${device.large}{
+        ${device.large} {
             margin-bottom: 20px;
         }
-        ${device.xlarge}{
+        ${device.xlarge} {
             margin-bottom: 30px;
         }
-        
+
         .gatsby-image-wrapper-constrained {
             display: block !important;
             img {
@@ -61,7 +60,7 @@ export const SingleHeroCategoryItem = styled.div`
             visibility: visible;
         }
     }
-`
+`;
 
 export const HeroCategoryInnerBox = styled.div`
     position: absolute;
@@ -87,22 +86,20 @@ export const HeroCategoryInnerBox = styled.div`
         text-align: center;
         border-radius: 50000px;
     }
-    ${device.large}{
+    ${device.large} {
         padding: 10px 20px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         padding: 10px 30px;
     }
-    
-`
+`;
 export const Title = styled.h3`
     color: #ffffff;
 
-    ${device.medium}{
+    ${device.medium} {
         font-size: 18px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         font-size: 20px;
     }
-`
-
+`;

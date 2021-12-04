@@ -284,7 +284,6 @@ export const GlobalCSS = () => {
                     ${device.xlarge} {
                         font-size: ${theme.fontSize.h3[4]};
                     }
-                    
                 }
                 h4,
                 .h4 {
@@ -428,15 +427,14 @@ export const GlobalCSS = () => {
 
                 .container {
                     max-width: 100%;
-                    padding-right: var(--bs-gutter-x,2.50rem);
-                    padding-left: var(--bs-gutter-x,2.50rem);
+                    padding-right: var(--bs-gutter-x, 2.5rem);
+                    padding-left: var(--bs-gutter-x, 2.5rem);
                     ${device.small} {
-                        
                     }
                     ${device.medium} {
                         max-width: 720px;
-                        padding-right: var(--bs-gutter-x,.75rem);
-                        padding-left: var(--bs-gutter-x,.75rem);
+                        padding-right: var(--bs-gutter-x, 0.75rem);
+                        padding-left: var(--bs-gutter-x, 0.75rem);
                     }
                     ${device.large} {
                         max-width: 960px;
@@ -444,7 +442,6 @@ export const GlobalCSS = () => {
                     ${device.xlarge} {
                         max-width: 1200px;
                     }
-                   
                 }
 
                 .link-overlay {
@@ -456,7 +453,6 @@ export const GlobalCSS = () => {
                     text-indent: -99999px;
                 }
 
-                     
                 .container-custom-xl {
                     max-width: 1540px;
                     width: 100%;
@@ -510,15 +506,15 @@ export const GlobalCSS = () => {
                         margin-right: -35px;
                     }
 
-                    &>[class*="col"],
-                    &>[class*="col-"] {
+                    & > [class*="col"],
+                    & > [class*="col-"] {
                         padding-left: 15px;
                         padding-right: 15px;
 
                         // Responsive
                         ${device.medium} {
                             padding-left: 15px;
-                            padding-right: 15px; 
+                            padding-right: 15px;
                         }
                         ${device.large} {
                             padding-left: 15px;
@@ -547,15 +543,15 @@ export const GlobalCSS = () => {
                         margin-right: -30px;
                     }
 
-                    &>[class*="col"],
-                    &>[class*="col-"] {
+                    & > [class*="col"],
+                    & > [class*="col-"] {
                         padding-left: 15px;
                         padding-right: 15px;
 
                         // Responsive
                         ${device.medium} {
                             padding-left: 15px;
-                            padding-right: 15px; 
+                            padding-right: 15px;
                         }
                         ${device.large} {
                             padding-left: 15px;
@@ -584,8 +580,8 @@ export const GlobalCSS = () => {
                         margin-right: -17px;
                     }
 
-                    &>[class*="col"],
-                    &>[class*="col-"] {
+                    & > [class*="col"],
+                    & > [class*="col-"] {
                         padding-left: 15px;
                         padding-right: 15px;
                         // Responsive
@@ -621,8 +617,8 @@ export const GlobalCSS = () => {
                         margin-right: -10px !important;
                     }
 
-                    &>[class*="col"],
-                    &>[class*="col-"] {
+                    & > [class*="col"],
+                    & > [class*="col-"] {
                         padding-left: 10px;
                         padding-right: 10px;
                         // Responsive
@@ -640,7 +636,6 @@ export const GlobalCSS = () => {
                         }
                     }
                 }
-
             `}
         />
     );

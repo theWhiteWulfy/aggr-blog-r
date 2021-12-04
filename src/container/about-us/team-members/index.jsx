@@ -1,16 +1,13 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import TeamItems from '../../../components/team-item'
-import { graphql, useStaticQuery } from 'gatsby'
-import {
-    TeamArea
-} from './style'
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import TeamItems from "../../../components/team-item";
+import { graphql, useStaticQuery } from "gatsby";
+import { TeamArea } from "./style";
 
 const TeamMembersArea = () => {
-    
     const teamMembersQuery = useStaticQuery(graphql`
         query TeamMembersQuery {
-            teamJson(id: {eq: "team-area"}) {
+            teamJson(id: { eq: "team-area" }) {
                 section_title {
                     subTitle
                     title
@@ -26,11 +23,10 @@ const TeamMembersArea = () => {
                 }
             }
         }
-      
     `);
     const {
         section_title: { title, subTitle },
-        team
+        team,
     } = teamMembersQuery.teamJson;
 
     return (
@@ -39,26 +35,28 @@ const TeamMembersArea = () => {
                 <Row>
                     <Col lg={12}>
                         <div className="section-title text-center">
-                            <h6 className="sub-title-primary mb-20">{subTitle}</h6>
+                            <h6 className="sub-title-primary mb-20">
+                                {subTitle}
+                            </h6>
                             <h2 className="title">{title}</h2>
                         </div>
                     </Col>
                 </Row>
                 <Row className="gx-5">
-                    {team && team.map((itemData, i) =>(
-                        <Col sm={6} md={6} lg={3} key={i}>
-                            <TeamItems
-                                images={itemData.images.childrenImageSharp}
-                                name={itemData.name}
-                                designation={itemData.designation}
-                            />
-                        </Col>
-                    ))}
-                    
+                    {team &&
+                        team.map((itemData, i) => (
+                            <Col sm={6} md={6} lg={3} key={i}>
+                                <TeamItems
+                                    images={itemData.images.childrenImageSharp}
+                                    name={itemData.name}
+                                    designation={itemData.designation}
+                                />
+                            </Col>
+                        ))}
                 </Row>
             </Container>
         </TeamArea>
-    )
-}
+    );
+};
 
-export default TeamMembersArea
+export default TeamMembersArea;

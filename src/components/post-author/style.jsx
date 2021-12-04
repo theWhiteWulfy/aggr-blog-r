@@ -1,12 +1,11 @@
 import styled, { device } from "@theme/utils";
 
-
 export const FollowingAuthorArea = styled.div`
     border: 1px solid #f3f3f3;
     border-radius: 10px;
     text-align: center;
     padding: 30px 15px;
-`
+`;
 export const AuthorImage = styled.div`
     border: 1px solid #f3f3f3;
     display: inline-block;
@@ -16,27 +15,25 @@ export const AuthorImage = styled.div`
     img {
         border-radius: 100%;
     }
-`
+`;
 export const AuthorTitle = styled.div`
     margin-bottom: 10px;
-`
+`;
 export const AuthorName = styled.h4`
-   margin-bottom: 0;
-`
+    margin-bottom: 0;
+`;
 export const AuthorDegination = styled.p`
     font-size: 14px;
-`
-export const AuthorDetails = styled.div`
-   
-`
+`;
+export const AuthorDetails = styled.div``;
 export const AuthorDetailsText = styled.p`
     margin-bottom: 20px;
     font-size: 15px;
     line-height: 1.6;
-`
+`;
 export const AuthorPostShare = styled.div`
     margin-bottom: 30px;
-`
+`;
 export const SocialShareArea = styled.ul`
     li {
         display: inline-block;
@@ -51,10 +48,9 @@ export const SocialShareArea = styled.ul`
             display: block;
         }
     }
-`
+`;
 export const ButtonBox = styled.div`
     a {
-        
         font-weight: 400;
         line-height: 1.5;
         color: #212529;
@@ -67,10 +63,11 @@ export const ButtonBox = styled.div`
         user-select: none;
         background-color: transparent;
         border: 1px solid transparent;
-        padding: .375rem .75rem;
+        padding: 0.375rem 0.75rem;
         font-size: 1rem;
-        border-radius: .25rem;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
         height: 50px;
         line-height: 48px;
@@ -80,4 +77,4 @@ export const ButtonBox = styled.div`
         border-radius: 15px;
         display: inline-block;
     }
-`
+`;

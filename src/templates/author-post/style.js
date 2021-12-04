@@ -21,6 +21,4 @@ export const BlogPostContentArea = styled.div`
 export const PostTitleArea = styled.div`
     margin-bottom: 30px;
 `;
-export const PostTitle = styled.h3`
-    
-`;
+export const PostTitle = styled.h3``;

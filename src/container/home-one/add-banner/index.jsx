@@ -1,12 +1,11 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { StaticImage} from "gatsby-plugin-image";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
 import {
     BottomAddBannerArea,
     BottomAddBannerBox,
-    BottomAddText
-} from "./style" 
-
+    BottomAddText,
+} from "./style";
 
 const AddBanner = () => {
     return (
@@ -15,7 +14,10 @@ const AddBanner = () => {
                 <Row>
                     <Col lg={12}>
                         <BottomAddBannerBox href="#">
-                            <StaticImage src="../../../data/images/banners/bottom-add-banner.jpg" alt=""/>
+                            <StaticImage
+                                src="../../../data/images/banners/bottom-add-banner.jpg"
+                                alt=""
+                            />
                             <BottomAddText>
                                 All Food Item
                                 <span>50% Off</span>
@@ -25,7 +27,7 @@ const AddBanner = () => {
                 </Row>
             </Container>
         </BottomAddBannerArea>
-    )
-}
+    );
+};
 
-export default AddBanner
+export default AddBanner;

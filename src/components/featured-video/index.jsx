@@ -1,8 +1,8 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { slugify } from "@utils/functions";
 import Video from "@components/shared/video";
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleFeaturedVideoItem,
@@ -10,7 +10,6 @@ import {
     HtPopupVideo,
     VideoButtonTwo,
     VideoPlayIcon,
-
     FeaturedVdeoContent,
     FeaturedBlogPostTop,
     FrendingBlogPostCategory,
@@ -18,18 +17,25 @@ import {
     PostDate,
     ReadTime,
     PostMetaRightSide,
-    Title
+    Title,
+} from "./style";
 
-} from './style'
-
-const FeaturedVideoItems = ({title, thume_image, video_link, date, slug, dateSlug, categories}) => {
+const FeaturedVideoItems = ({
+    title,
+    thume_image,
+    video_link,
+    date,
+    slug,
+    dateSlug,
+    categories,
+}) => {
     const image = getImage(thume_image);
-    
+
     // Video Modal Popup
-    
+
     let video_arr, video_id, video_channel;
-    if(video_link){
-        video_arr = video_link.split('=', -1);
+    if (video_link) {
+        video_arr = video_link.split("=", -1);
         video_id = video_arr[1];
         video_channel = video_link.split(".")[1];
     }
@@ -39,10 +45,11 @@ const FeaturedVideoItems = ({title, thume_image, video_link, date, slug, dateSlu
         <SingleFeaturedVideoItem>
             <div className="video-link mt-30">
                 <SinglePopupWrap>
-                    <GatsbyImage image={image} alt=""/>
+                    <GatsbyImage image={image} alt="" />
                     <HtPopupVideo>
                         <VideoButtonTwo>
-                            <div className="video-play"
+                            <div
+                                className="video-play"
                                 onClick={() => setOpen(true)}
                                 role="button"
                                 tabIndex="0"
@@ -62,21 +69,36 @@ const FeaturedVideoItems = ({title, thume_image, video_link, date, slug, dateSlu
             <FeaturedVdeoContent>
                 <FeaturedBlogPostTop>
                     <FrendingBlogPostCategory>
-                        {categories && categories.map((cat, i) => 
-                            <Link key={i} to={`/category/${slugify(cat.name)}`} className={`cat-btn ${cat.color}`}>
-                                {cat.name}
-                            </Link>
-                        )}
+                        {categories &&
+                            categories.map((cat, i) => (
+                                <Link
+                                    key={i}
+                                    to={`/category/${slugify(cat.name)}`}
+                                    className={`cat-btn ${cat.color}`}
+                                >
+                                    {cat.name}
+                                </Link>
+                            ))}
                     </FrendingBlogPostCategory>
                     <PostMetaLeftSide>
                         <PostDate>
-                            <i className="icofont-ui-calendar"></i> 
+                            <i className="icofont-ui-calendar"></i>
                             <Link to={`/date/${dateSlug}`}>{date}</Link>
                         </PostDate>
                     </PostMetaLeftSide>
                     <PostMetaRightSide>
-                        <a href="#"><StaticImage src="../../data/images/icons/small-bookmark.png" alt=""/></a>
-                        <a href="#"><StaticImage src="../../data/images/icons/heart.png" alt=""/></a>
+                        <a href="#">
+                            <StaticImage
+                                src="../../data/images/icons/small-bookmark.png"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#">
+                            <StaticImage
+                                src="../../data/images/icons/heart.png"
+                                alt=""
+                            />
+                        </a>
                     </PostMetaRightSide>
                 </FeaturedBlogPostTop>
                 <Title>
@@ -84,7 +106,7 @@ const FeaturedVideoItems = ({title, thume_image, video_link, date, slug, dateSlu
                 </Title>
             </FeaturedVdeoContent>
         </SingleFeaturedVideoItem>
-    )
-}
+    );
+};
 
-export default FeaturedVideoItems
+export default FeaturedVideoItems;

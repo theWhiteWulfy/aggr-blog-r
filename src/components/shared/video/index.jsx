@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ModalVideo from "react-modal-video";
 
-const Video = ({channel, isOpen, videoId, setOpen }) => {
+const Video = ({ channel, isOpen, videoId, setOpen }) => {
     return (
         <ModalVideo
             channel={channel}

@@ -1,20 +1,15 @@
-import React from 'react'
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import SingleBlogItem from '../../../components/single-blog-item'
-import { Container, Row, Col } from 'react-bootstrap';
-import {
-    RecentArticleArea,
-    SectionTitleArea,
-    Title
-} from './style'
+import SingleBlogItem from "../../../components/single-blog-item";
+import { Container, Row, Col } from "react-bootstrap";
+import { RecentArticleArea, SectionTitleArea, Title } from "./style";
 const RecentArticlesArea = () => {
-
     const recentArticlesAreaQuery = useStaticQuery(graphql`
         query RecentArticlesQuery {
             latestPost: allMarkdownRemark(
-                sort: {fields: [frontmatter___date], order: DESC},
+                sort: { fields: [frontmatter___date], order: DESC }
                 limit: 9
-              ) {
+            ) {
                 edges {
                     node {
                         id
@@ -25,7 +20,11 @@ const RecentArticlesArea = () => {
                             is_featured
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 440, height: 304, quality: 100)
+                                    gatsbyImageData(
+                                        width: 440
+                                        height: 304
+                                        quality: 100
+                                    )
                                 }
                             }
                         }
@@ -38,7 +37,6 @@ const RecentArticlesArea = () => {
                     }
                 }
             }
-            
         }
     `);
 
@@ -55,25 +53,35 @@ const RecentArticlesArea = () => {
                     </Col>
                 </Row>
                 <Row className="gx-5">
-                    {recentArticleData && recentArticleData.map((latestPosts, i) => {
-                        return ( 
-                            <Col lg={4} md={6} key={i}>
-                                <SingleBlogItem
-                                    title={latestPosts.node.frontmatter.title}
-                                    thume_image={latestPosts.node.frontmatter.thume_image}
-                                    date={latestPosts.node.frontmatter.date}
-                                    slug={latestPosts.node.fields.slug}
-                                    body={latestPosts.node.excerpt}
-                                    authorId={latestPosts.node.fields.authorId}
-                                    dateSlug={latestPosts.node.fields.dateSlug}
-                                />
-                            </Col>
-                        );
-                    })}
+                    {recentArticleData &&
+                        recentArticleData.map((latestPosts, i) => {
+                            return (
+                                <Col lg={4} md={6} key={i}>
+                                    <SingleBlogItem
+                                        title={
+                                            latestPosts.node.frontmatter.title
+                                        }
+                                        thume_image={
+                                            latestPosts.node.frontmatter
+                                                .thume_image
+                                        }
+                                        date={latestPosts.node.frontmatter.date}
+                                        slug={latestPosts.node.fields.slug}
+                                        body={latestPosts.node.excerpt}
+                                        authorId={
+                                            latestPosts.node.fields.authorId
+                                        }
+                                        dateSlug={
+                                            latestPosts.node.fields.dateSlug
+                                        }
+                                    />
+                                </Col>
+                            );
+                        })}
                 </Row>
             </Container>
         </RecentArticleArea>
-    )
-}
+    );
+};
 
-export default RecentArticlesArea
+export default RecentArticlesArea;

@@ -14,15 +14,13 @@ export const OffcanvasSearch = styled.div`
     overflow: hidden;
     transform: translateY(100%);
     transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-   
+
     &.inside {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
     }
-
-    
-`
+`;
 
 export const OffcanvasSearchBox = styled.div`
     max-width: 1000px;
@@ -31,8 +29,8 @@ export const OffcanvasSearchBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:15px;
-`
+    padding: 15px;
+`;
 
 export const MobileNavigationClose = styled.div`
     position: relative;
@@ -41,11 +39,11 @@ export const MobileNavigationClose = styled.div`
     width: 48px;
     line-height: 48px;
     display: inline-block;
-    &:before{
+    &:before {
         position: absolute;
         top: 28px;
         left: 0px;
-        content: '';
+        content: "";
         width: 42px;
         height: 3px;
         background: #fff;
@@ -53,11 +51,11 @@ export const MobileNavigationClose = styled.div`
         transform: rotate(45deg);
         transition: all 0.3s ease-in-out;
     }
-    &:after{
+    &:after {
         position: absolute;
         top: 28px;
         left: 0px;
-        content: '';
+        content: "";
         width: 42px;
         height: 3px;
         background: #fff;
@@ -65,24 +63,21 @@ export const MobileNavigationClose = styled.div`
         transform: rotate(-45deg);
         transition: all 0.3s ease-in-out;
     }
-    &:hover{
+    &:hover {
         color: $primary;
-        &:before, &:after{
+        &:before,
+        &:after {
             transform: none;
         }
     }
-`
+`;
 
 export const SearchRemove = styled.div`
     text-align: right;
     margin-bottom: 30px;
-`
-export const SearchOverlayForm = styled.div`
-    
-`
-export const Form = styled.form`
-    
-`
+`;
+export const SearchOverlayForm = styled.div``;
+export const Form = styled.form``;
 export const Input = styled.input`
     border: none;
     border-bottom: 1px solid #fff;
@@ -90,4 +85,4 @@ export const Input = styled.input`
     font-weight: 600;
     color: #fff;
     padding: 10px 0;
-`
+`;

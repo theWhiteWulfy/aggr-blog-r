@@ -5,8 +5,7 @@ export const BottomAddBannerArea = styled.div`
     ${device.small} {
         padding-bottom: 80px;
     }
-    
-`
+`;
 export const BottomAddBannerBox = styled.a`
     position: relative;
     display: block;
@@ -19,8 +18,7 @@ export const BottomAddBannerBox = styled.a`
             width: 100%;
         }
     }
-    
-`
+`;
 export const BottomAddText = styled.h6`
     font-size: 25px;
     position: absolute;
@@ -34,4 +32,4 @@ export const BottomAddText = styled.h6`
         text-align: left;
         margin-top: 3px;
     }
-`
+`;

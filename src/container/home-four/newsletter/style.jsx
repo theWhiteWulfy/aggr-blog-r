@@ -1,4 +1,4 @@
-import styled , {device} from "@theme/utils"
+import styled, { device } from "@theme/utils";
 
 export const NewsletterArea = styled.div`
     padding-top: 60px;
@@ -11,4 +11,4 @@ export const NewsletterArea = styled.div`
         padding-top: 120px;
         padding-bottom: 120px;
     }
-`
+`;

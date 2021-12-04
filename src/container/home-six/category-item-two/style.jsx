@@ -9,13 +9,13 @@ export const CategorySection = styled.div`
     ${device.medium} {
         padding: 120px 0;
     }
-`
+`;
 export const SectionTitle = styled.div`
     text-align: center;
-`
+`;
 export const Title = styled.h3`
     text-transform: capitalize;
-`
+`;
 export const MoreButtonBox = styled.div`
     text-align: center;
     margin-top: 60px;
@@ -23,4 +23,4 @@ export const MoreButtonBox = styled.div`
         color: #fff !important;
         padding: 0 30px;
     }
-`
+`;

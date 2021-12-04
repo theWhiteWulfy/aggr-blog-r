@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby';
-import {GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
+import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleMostPopulerItem,
     MostPopulerContent,
@@ -8,9 +8,16 @@ import {
     Title,
     PostMeta,
     PostDate,
-    PostReadTime
-} from './style'
-const MostPopulerItem = ({title, thume_image, dateSlug, authorId, date, slug}) => {
+    PostReadTime,
+} from "./style";
+const MostPopulerItem = ({
+    title,
+    thume_image,
+    dateSlug,
+    authorId,
+    date,
+    slug,
+}) => {
     const images = getImage(thume_image);
     return (
         <SingleMostPopulerItem>
@@ -32,7 +39,7 @@ const MostPopulerItem = ({title, thume_image, dateSlug, authorId, date, slug}) =
                 </PostMeta>
             </MostPopulerContent>
         </SingleMostPopulerItem>
-    )
-}
+    );
+};
 
-export default MostPopulerItem
+export default MostPopulerItem;

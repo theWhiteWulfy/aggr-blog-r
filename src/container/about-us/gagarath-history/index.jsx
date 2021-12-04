@@ -1,13 +1,13 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
-import HistoryItem from '@components/history-item'
+import HistoryItem from "@components/history-item";
 import {
     GagarathHistoryWrap,
     GagarathRow,
     GagarathCol6,
     GagarathHistoryTitle,
-} from './style'
+} from "./style";
 
 const GagarathHistoryArea = () => {
     const gagarathHistoryAreaQery = useStaticQuery(graphql`
@@ -23,10 +23,7 @@ const GagarathHistoryArea = () => {
             }
         }
     `);
-    const {
-        history_title,
-        history
-    } = gagarathHistoryAreaQery.aboutUsJson;
+    const { history_title, history } = gagarathHistoryAreaQery.aboutUsJson;
 
     return (
         <GagarathHistoryWrap>
@@ -35,7 +32,11 @@ const GagarathHistoryArea = () => {
                     <Col>
                         <GagarathRow>
                             <GagarathCol6>
-                                <GagarathHistoryTitle dangerouslySetInnerHTML={{ __html: history_title }}/>
+                                <GagarathHistoryTitle
+                                    dangerouslySetInnerHTML={{
+                                        __html: history_title,
+                                    }}
+                                />
                             </GagarathCol6>
                             <GagarathCol6>
                                 {history.map((itemData) => (
@@ -51,8 +52,7 @@ const GagarathHistoryArea = () => {
                 </Row>
             </Container>
         </GagarathHistoryWrap>
-    )
-}
+    );
+};
 
-
-export default GagarathHistoryArea
+export default GagarathHistoryArea;

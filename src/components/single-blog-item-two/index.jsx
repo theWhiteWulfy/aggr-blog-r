@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby';
-import {GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
+import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleBlogWrap,
     BlogContent,
@@ -9,16 +9,24 @@ import {
     PostMeta,
     PostDate,
     DecText,
-    PostReadTime
-} from './style'
+    PostReadTime,
+} from "./style";
 
-const SingleBlogItem = ({title, thume_image, body, date, dateSlug, slug, authorId}) => {
+const SingleBlogItem = ({
+    title,
+    thume_image,
+    body,
+    date,
+    dateSlug,
+    slug,
+    authorId,
+}) => {
     const image = getImage(thume_image);
     return (
         <SingleBlogWrap>
             <Link to={`/${slug}`}>
                 <GatsbyImage image={image} alt={title} />
-            </Link>             
+            </Link>
             <BlogContent>
                 <Author>
                     By <Link to={`/profile/${authorId}`}>{authorId}</Link>
@@ -35,7 +43,7 @@ const SingleBlogItem = ({title, thume_image, body, date, dateSlug, slug, authorI
                 </PostMeta>
             </BlogContent>
         </SingleBlogWrap>
-    )
-}
+    );
+};
 
-export default SingleBlogItem
+export default SingleBlogItem;

@@ -1,5 +1,5 @@
 import styled, { themeGet, device } from "@theme/utils";
-import HeaderTopBg from "../../../data/images/banners/header-top.jpg"
+import HeaderTopBg from "../../../data/images/banners/header-top.jpg";
 
 export const HeaderWrap = styled.header`
     &.absolute-header {
@@ -9,53 +9,49 @@ export const HeaderWrap = styled.header`
     }
 `;
 export const HeaderTopArea = styled.div`
-    background-color: ${themeGet('colors.primary')};
+    background-color: ${themeGet("colors.primary")};
     background-image: url(${HeaderTopBg});
     padding: 10px 0;
 `;
 
 export const OfferNotification = styled.p`
-    color: ${themeGet('colors.white')};
+    color: ${themeGet("colors.white")};
     line-height: 2.5;
     a {
         white-space: nowrap;
     }
 `;
 export const OfferText = styled.span`
-    color: ${themeGet('colors.offer')};
+    color: ${themeGet("colors.offer")};
     margin-right: 15px;
 `;
-
-
 
 export const HeaderBottomArea = styled.div`
     background-color: #edf0f8;
 `;
 
-export const HeaderTopLeft = styled.div`
-
-`
+export const HeaderTopLeft = styled.div``;
 export const HeaderTopRight = styled.div`
     display: flex;
     align-items: center;
-    ${device.medium}{
+    ${device.medium} {
         justify-content: flex-end;
     }
-`
+`;
 export const HeaderLeft = styled.div`
     display: flex;
     align-items: center;
     height: 110px;
-`
+`;
 export const Logo = styled.div`
     padding: 30px 0;
-`
+`;
 
 export const HeaderMidRightSide = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-`
+`;
 export const SingleActionItem = styled.div`
     a {
         background-color: transparent;
@@ -68,21 +64,21 @@ export const SingleActionItem = styled.div`
         display: flex;
         justify-content: center;
         display: none;
-        ${device.small}{
+        ${device.small} {
             margin-left: 10px;
             display: inherit;
         }
-        ${device.medium}{
+        ${device.medium} {
             margin-left: 10px;
         }
-        ${device.large}{
+        ${device.large} {
             margin-left: 20px;
         }
-        ${device.xlarge}{
+        ${device.xlarge} {
             margin-left: 20px;
         }
     }
-`
+`;
 
 export const ButtonAction = styled.div`
     margin-left: 20px;
@@ -92,25 +88,24 @@ export const ButtonAction = styled.div`
         text-aligin: text-center;
         height: 40px;
         line-height: 40px;
-        ${device.large}{
+        ${device.large} {
             padding: 0 20px;
             font-size: 16px;
             height: 60px;
             line-height: 60px;
         }
-        ${device.xlarge}{
+        ${device.xlarge} {
             padding: 0 30px;
             font-size: 16px;
         }
     }
-`
-
+`;
 
 export const MainMenuArea = styled.div`
-    ${device.large}{
+    ${device.large} {
         margin-left: 60px;
     }
-`
+`;
 export const HeaderActionArea = styled.div`
     position: relative;
     top: -0.5px;
@@ -246,6 +241,3 @@ export const ButtonClose = styled.button`
         center/1em auto no-repeat;
     border: 0;
 `;
-
-
-

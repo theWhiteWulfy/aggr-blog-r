@@ -7,14 +7,14 @@ export const FaqWrapper = styled.div`
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
     }
-`
+`;
 export const FaqSectionTitle = styled.div`
     margin-top: 30px;
-`
+`;
 export const FaqsTitle = styled.h4`
-font-size: 32px;
-margin-top: 50px;
-    
+    font-size: 32px;
+    margin-top: 50px;
+
     font-weight: 400;
     margin-right: 30px;
     span {
@@ -22,19 +22,19 @@ margin-top: 50px;
         display: block;
     }
 
-    ${device.medium}{
+    ${device.medium} {
         font-size: 42px;
         margin-top: 50px;
     }
-    ${device.large}{
+    ${device.large} {
         font-size: 42px;
         margin-top: 50px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         font-size: 62px;
         margin-top: 100px;
-    }  
-`
+    }
+`;
 
 export const FaqContentWrap = styled.div`
     border-left: 1px solid #ddd;
@@ -46,7 +46,7 @@ export const FaqContentWrap = styled.div`
         &:last-child {
             border-bottom: none;
         }
-    }  
+    }
     .accordion__heading {
         background: transparent;
         border: none;
@@ -56,7 +56,7 @@ export const FaqContentWrap = styled.div`
         .acc-btn {
             display: flex;
         }
-        ${device.medium}{
+        ${device.medium} {
             padding: 40px 0 40px 40px;
             font-size: 20px;
         }
@@ -72,7 +72,7 @@ export const FaqContentWrap = styled.div`
             font-size: 15px;
             display: inline-block;
         }
-        & [aria-expanded=true] {
+        & [aria-expanded="true"] {
             & .number-of-accordion {
                 background-color: ${themeGet("colors.primary")};
                 color: #fff;
@@ -82,10 +82,9 @@ export const FaqContentWrap = styled.div`
     .accordion__panel {
         font-size: 14px;
         padding: 0px 0 20px 10px;
-        ${device.medium}{
+        ${device.medium} {
             font-size: 15px;
             padding: 0 0 40px 100px;
         }
     }
-`
-
+`;

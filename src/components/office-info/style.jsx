@@ -7,14 +7,14 @@ export const SingleOfficeInfowrap = styled.div`
             background-color: ${themeGet("colors.primary")};
         }
     }
-`
+`;
 export const OfficeThum = styled.div`
     margin-top: 30px;
     padding: 30px;
     background: #f7f7f7;
     border-radius: 15px;
     position: relative;
-`
+`;
 export const OfficeTitle = styled.span`
     position: absolute;
     bottom: 60px;
@@ -29,8 +29,7 @@ export const OfficeTitle = styled.span`
     color: #ffffff;
     padding: 10px 40px;
     transition: all 0.3s ease-in-out;
-
-`
+`;
 export const SingleOfficeInfoBox = styled.div`
     margin-top: 30px;
     padding: 40px 15px;
@@ -40,21 +39,21 @@ export const SingleOfficeInfoBox = styled.div`
     &:hover {
         border: 1px solid ${themeGet("colors.primary")};
     }
-    ${device.medium}{
+    ${device.medium} {
         padding: 40px 15px;
     }
-    ${device.large}{
+    ${device.large} {
         padding: 40px 15px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         padding: 40px 55px;
     }
-`
+`;
 export const SingleContactInfo = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-`
+`;
 export const IconBox = styled.span`
     min-height: 45px;
     min-width: 45px;
@@ -64,18 +63,10 @@ export const IconBox = styled.span`
     text-align: center;
     background-color: #f4f4f4;
     .gatsby-image-wrapper-constrained {
-        vertical-align: middle!important;
+        vertical-align: middle !important;
     }
-`
-export const ContactText = styled.span`
-
-`
-export const NavLink = styled.a`
-
-`
-export const ShareWrap = styled.div`
-
-`
-export const Title = styled.h4`
-
-`
+`;
+export const ContactText = styled.span``;
+export const NavLink = styled.a``;
+export const ShareWrap = styled.div``;
+export const Title = styled.h4``;

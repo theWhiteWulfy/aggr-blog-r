@@ -5,9 +5,14 @@ import PageBreadcrumb from "@components/pagebreadcrumb";
 import { graphql } from "gatsby";
 import { Row, Container, Col } from "react-bootstrap";
 import LargeSinglePosts from "../../components/large-single-post";
-import LatestPostArea from '../../container/latest-post';
+import LatestPostArea from "../../container/latest-post";
 import { StaticImage } from "gatsby-plugin-image";
-import {BlogDetailsArea,TagTitle, BlogDetailsRightSidebar, BlogAddBanner } from "./style";
+import {
+    BlogDetailsArea,
+    TagTitle,
+    BlogDetailsRightSidebar,
+    BlogAddBanner,
+} from "./style";
 
 const TagPosts = ({ data, location, pageContext }) => {
     const { tag } = pageContext;
@@ -34,19 +39,28 @@ const TagPosts = ({ data, location, pageContext }) => {
                                     return (
                                         <Col lg={12} key={i}>
                                             <LargeSinglePosts
-                                                title={blog.node.frontmatter.title}
+                                                title={
+                                                    blog.node.frontmatter.title
+                                                }
                                                 thume_image={
                                                     blog.node.frontmatter
                                                         .thume_image
                                                 }
                                                 categories={
-                                                    blog.node.frontmatter.categories
+                                                    blog.node.frontmatter
+                                                        .categories
                                                 }
                                                 body={blog.node.excerpt}
-                                                date={blog.node.frontmatter.date}
+                                                date={
+                                                    blog.node.frontmatter.date
+                                                }
                                                 slug={blog.node.fields.slug}
-                                                authorId={blog.node.fields.authorId}
-                                                authorSlug={blog.node.fields.authorId}
+                                                authorId={
+                                                    blog.node.fields.authorId
+                                                }
+                                                authorSlug={
+                                                    blog.node.fields.authorId
+                                                }
                                             />
                                         </Col>
                                     );
@@ -57,16 +71,18 @@ const TagPosts = ({ data, location, pageContext }) => {
                             <BlogDetailsRightSidebar>
                                 <BlogAddBanner>
                                     <a href="#">
-                                        <StaticImage src="../../data/images/banners/add-banner.jpg" alt=""/>
+                                        <StaticImage
+                                            src="../../data/images/banners/add-banner.jpg"
+                                            alt=""
+                                        />
                                     </a>
                                 </BlogAddBanner>
-                                <LatestPostArea/>
+                                <LatestPostArea />
                             </BlogDetailsRightSidebar>
                         </Col>
                     </Row>
                 </Container>
             </BlogDetailsArea>
-            
         </Layout>
     );
 };
@@ -80,12 +96,8 @@ TagPosts.propTypes = {
 export const tagQuery = graphql`
     query($tag: String!) {
         allMarkdownRemark(
-            sort: { 
-                fields: frontmatter___date, order: DESC }
-                filter: { 
-                    frontmatter: { tags: { in: [$tag] }
-                }
-            }
+            sort: { fields: frontmatter___date, order: DESC }
+            filter: { frontmatter: { tags: { in: [$tag] } } }
         ) {
             edges {
                 node {

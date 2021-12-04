@@ -6,14 +6,14 @@ export const StayInTouchArea = styled.div`
     background: #fafafa;
     border-radius: 10px;
     text-align: center;
-`
+`;
 export const StayInTouchBox = styled.div`
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     margin-left: -5px;
     margin-right: -5px;
-`
+`;
 export const SingleTouchCol = styled.div`
     width: 33.333%;
     flex: 0 0 auto;
@@ -22,37 +22,35 @@ export const SingleTouchCol = styled.div`
 
     .facebook {
         .socail-icon {
-            background-color: #4867AA;
+            background-color: #4867aa;
         }
     }
     .twitter {
         .socail-icon {
-            background-color: #1DA1F2;
+            background-color: #1da1f2;
         }
     }
     .behance {
         .socail-icon {
-            background-color: #1869FF;
+            background-color: #1869ff;
         }
     }
     .youtube-play {
         .socail-icon {
-            background-color: #FE0000;
+            background-color: #fe0000;
         }
     }
     .dribbble {
         .socail-icon {
-            background-color: #EA4C8A;
+            background-color: #ea4c8a;
         }
     }
     .linkedin {
         .socail-icon {
-            background-color: #007BB6;
+            background-color: #007bb6;
         }
     }
-
-
-`
+`;
 export const SingleTouch = styled.a`
     background-color: #ebebeb;
     width: 100%;
@@ -64,7 +62,7 @@ export const SingleTouch = styled.a`
     &:hover {
         background-color: #ddd;
     }
-`
+`;
 export const TouchSocailIcon = styled.div`
     height: 40px;
     width: 40px;
@@ -74,9 +72,8 @@ export const TouchSocailIcon = styled.div`
     margin-bottom: 5px;
     border-radius: 100%;
     color: #ffffff;
-
-`
+`;
 export const TouchTitle = styled.p`
     color: #000000;
     font-size: 12px;
-`
+`;

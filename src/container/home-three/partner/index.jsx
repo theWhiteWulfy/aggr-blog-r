@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import { graphql, useStaticQuery } from 'gatsby';
-import { Container, Row, Col } from 'react-bootstrap';
-import PartnerItem from '../../../components/partner';
+import { graphql, useStaticQuery } from "gatsby";
+import { Container, Row, Col } from "react-bootstrap";
+import PartnerItem from "../../../components/partner";
 import {
     PartnerWrap,
     TrustedPartnersBox,
     SectionTitleThree,
-    Title
-} from './style'
+    Title,
+} from "./style";
 
 const PartnerArea = () => {
     const partnerAreaQuery = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ const PartnerArea = () => {
             }
         }
     `);
-    
+
     const partnerAreaData = partnerAreaQuery.allPatnerJson.edges;
 
     return (
@@ -48,9 +48,9 @@ const PartnerArea = () => {
                         }}
                         navigation={{
                             nextEl: ".partner-button-next",
-                            prevEl: ".partner-button-prev"
+                            prevEl: ".partner-button-prev",
                         }}
-                        centeredSlides= {false}
+                        centeredSlides={false}
                         slidesPerView={1}
                         spaceBetween={30}
                         breakpoints={{
@@ -68,12 +68,11 @@ const PartnerArea = () => {
                             },
                         }}
                     >
-                            {partnerAreaData && partnerAreaData.map((item, index) => {
+                        {partnerAreaData &&
+                            partnerAreaData.map((item, index) => {
                                 return (
                                     <SwiperSlide key={index}>
-                                        <PartnerItem
-                                            img={item.node.images}
-                                        />
+                                        <PartnerItem img={item.node.images} />
                                     </SwiperSlide>
                                 );
                             })}
@@ -81,7 +80,7 @@ const PartnerArea = () => {
                 </TrustedPartnersBox>
             </Container>
         </PartnerWrap>
-    )
-}
+    );
+};
 
-export default PartnerArea
+export default PartnerArea;

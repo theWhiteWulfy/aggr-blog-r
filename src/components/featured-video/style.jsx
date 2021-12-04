@@ -1,8 +1,8 @@
-import styled, {themeGet, device } from "@theme/utils";
+import styled, { themeGet, device } from "@theme/utils";
 
 export const SingleFeaturedVideoItem = styled.div`
     margin-bottom: 40px;
-` 
+`;
 export const SinglePopupWrap = styled.div`
     position: relative;
     .gatsby-image-wrapper-constrained {
@@ -17,12 +17,12 @@ export const SinglePopupWrap = styled.div`
         display: block;
         &:hover {
             & .video-play,
-            & .video-play-sm{
+            & .video-play-sm {
                 transform: scale3d(1.15, 1.15, 1.15);
             }
         }
     }
-` 
+`;
 export const HtPopupVideo = styled.div`
     position: absolute;
     top: 0;
@@ -30,7 +30,7 @@ export const HtPopupVideo = styled.div`
     bottom: 0;
     left: 0;
     margin: auto;
-` 
+`;
 export const VideoButtonTwo = styled.div`
     position: absolute;
     top: 50%;
@@ -49,8 +49,7 @@ export const VideoButtonTwo = styled.div`
         transition: all 1s cubic-bezier(0, 0, 0.2, 1) !important;
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
     }
-    
-` 
+`;
 
 export const VideoPlayIcon = styled.span`
     position: absolute;
@@ -60,7 +59,7 @@ export const VideoPlayIcon = styled.span`
     line-height: 1;
     margin-left: 1px;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -75,28 +74,23 @@ export const VideoPlayIcon = styled.span`
         border-left-width: 19px;
         border-left-color: #fff;
     }
-` 
+`;
 
-
-export const FeaturedVdeoContent = styled.div`
-    
-` 
+export const FeaturedVdeoContent = styled.div``;
 export const FeaturedBlogPostTop = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
     margin-top: 25px;
-` 
+`;
 export const FrendingBlogPostCategory = styled.div`
     margin-right: 20px;
     a {
         min-width: 90px;
     }
-` 
-export const PostMetaLeftSide = styled.div`
-    
-` 
+`;
+export const PostMetaLeftSide = styled.div``;
 export const PostDate = styled.span`
     position: relative;
     padding-right: 10px;
@@ -105,19 +99,15 @@ export const PostDate = styled.span`
     i {
         margin-right: 5px;
     }
-    ${device.small}{
+    ${device.small} {
         font-size: 13px;
     }
-` 
-export const ReadTime = styled.span`
-    
-` 
+`;
+export const ReadTime = styled.span``;
 export const PostMetaRightSide = styled.div`
     margin-left: 30px;
     a {
         margin-left: 10px;
     }
-` 
-export const Title = styled.h3`
-    
-` 
+`;
+export const Title = styled.h3``;

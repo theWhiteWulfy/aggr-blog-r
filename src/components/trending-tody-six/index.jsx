@@ -1,15 +1,15 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import { 
+import { Link } from "gatsby";
+import React from "react";
+import {
     PostContent,
     BlogPostAuthor,
     BlogPostTitle,
     PostMeta,
     PostDate,
-    ReadTime
+    ReadTime,
 } from "./style";
 
-const TrendingTody = ({title, dateSlug, authorSlug, slug}) => {
+const TrendingTody = ({ title, dateSlug, authorSlug, slug }) => {
     return (
         <PostContent>
             <BlogPostAuthor>
@@ -27,7 +27,7 @@ const TrendingTody = ({title, dateSlug, authorSlug, slug}) => {
                 <ReadTime>10 min read</ReadTime>
             </PostMeta>
         </PostContent>
-    )
-}
+    );
+};
 
-export default TrendingTody
+export default TrendingTody;

@@ -1,8 +1,8 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import {GatsbyImage, getImage } from "gatsby-plugin-image";
-import { 
+import { Link } from "gatsby";
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import {
     PostThum,
     PostContent,
     BlogPostAuthor,
@@ -10,17 +10,17 @@ import {
     ReadMoreBtn,
     PostMeta,
     PostDate,
-    ReadTime
+    ReadTime,
 } from "./style";
 
-const HeroSixPost = ({title,thume_image, dateSlug, authorSlug, slug}) => {
-    const images = getImage(thume_image)
+const HeroSixPost = ({ title, thume_image, dateSlug, authorSlug, slug }) => {
+    const images = getImage(thume_image);
     return (
         <Row className="align-items-center">
             <Col lg={6} md={6}>
                 <PostThum>
                     <Link to={`/${slug}`}>
-                        <GatsbyImage image={images} alt=""/>
+                        <GatsbyImage image={images} alt="" />
                     </Link>
                 </PostThum>
             </Col>
@@ -28,7 +28,10 @@ const HeroSixPost = ({title,thume_image, dateSlug, authorSlug, slug}) => {
                 <PostContent>
                     <PostMeta>
                         <BlogPostAuthor>
-                            By <Link to={`/profile/${authorSlug}`}>{authorSlug}</Link>
+                            By{" "}
+                            <Link to={`/profile/${authorSlug}`}>
+                                {authorSlug}
+                            </Link>
                         </BlogPostAuthor>
                         <PostDate>
                             <Link to={`/date/${dateSlug}`}>{dateSlug}</Link>
@@ -42,15 +45,14 @@ const HeroSixPost = ({title,thume_image, dateSlug, authorSlug, slug}) => {
 
                     <ReadMoreBtn>
                         <Link to={`/${slug}`}>
-                            Read more <i className="icofont-long-arrow-right"></i>
+                            Read more{" "}
+                            <i className="icofont-long-arrow-right"></i>
                         </Link>
                     </ReadMoreBtn>
-
-                    
                 </PostContent>
             </Col>
         </Row>
-    )
-}
+    );
+};
 
-export default HeroSixPost
+export default HeroSixPost;

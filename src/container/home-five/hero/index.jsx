@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import { Col, Container, Row } from 'react-bootstrap'
-import Button from '../../../components/shared/button'
+import { Col, Container, Row } from "react-bootstrap";
+import Button from "../../../components/shared/button";
 import { slugify } from "@utils/functions";
 import {
     HeroArea,
@@ -11,8 +11,8 @@ import {
     HeightLightTitle,
     HeroTextDec,
     ButtonBox,
-    HeroFiveCategory
-} from './style'
+    HeroFiveCategory,
+} from "./style";
 const HeroFiveArea = () => {
     const HeroFiveCategoryQuery = useStaticQuery(graphql`
         query CategoryFiveQuery {
@@ -23,7 +23,11 @@ const HeroFiveArea = () => {
                         color
                         image {
                             childImageSharp {
-                                gatsbyImageData(width: 260, height: 110, quality: 100)
+                                gatsbyImageData(
+                                    width: 260
+                                    height: 110
+                                    quality: 100
+                                )
                             }
                         }
                     }
@@ -31,7 +35,7 @@ const HeroFiveArea = () => {
             }
         }
     `);
-    const {categories} = HeroFiveCategoryQuery
+    const { categories } = HeroFiveCategoryQuery;
     return (
         <HeroArea>
             <Container>
@@ -40,25 +44,30 @@ const HeroFiveArea = () => {
                         <HeroFiveInnerText>
                             <SubTitle>All Solution In One</SubTitle>
                             <Title>
-                                <HeightLightTitle> Unlimited </HeightLightTitle> 
-                                  Advice &amp; Resource
+                                <HeightLightTitle> Unlimited </HeightLightTitle>
+                                Advice &amp; Resource
                             </Title>
-                            <HeroTextDec>That necessitates a robust ecommerce platform that
-                                optimizes your store &amp; products
+                            <HeroTextDec>
+                                That necessitates a robust ecommerce platform
+                                that optimizes your store &amp; products
                             </HeroTextDec>
                             <ButtonBox>
-                                <Button path="/" size="large" > Share your thinking <i className="icofont-long-arrow-right"></i></Button>
+                                <Button path="/" size="large">
+                                    {" "}
+                                    Share your thinking{" "}
+                                    <i className="icofont-long-arrow-right"></i>
+                                </Button>
                             </ButtonBox>
                         </HeroFiveInnerText>
                     </Col>
                     <Col lg={5}>
                         <HeroFiveCategory>
-                            {categories.edges.map(cat => (
-                                <Link 
-                                    to={`/category/${slugify(cat.node.name)}`} 
+                            {categories.edges.map((cat) => (
+                                <Link
+                                    to={`/category/${slugify(cat.node.name)}`}
                                     key={cat.node.name}
                                     className={`cat-lg-btn ${cat.node.color}`}
-                                    >
+                                >
                                     {cat.node.name}
                                 </Link>
                             ))}
@@ -67,7 +76,7 @@ const HeroFiveArea = () => {
                 </Row>
             </Container>
         </HeroArea>
-    )
-}
+    );
+};
 
-export default HeroFiveArea
+export default HeroFiveArea;

@@ -8,7 +8,7 @@ export const TrendingTodysArea = styled.div`
         & .swiper-pagination {
             bottom: 0px;
         }
-        
+
         .swiper-pagination-bullet {
             height: 12px;
             width: 12px;
@@ -21,7 +21,7 @@ export const TrendingTodysArea = styled.div`
             border-radius: 5000px;
         }
     }
-`
+`;
 export const SectionTitleTwo = styled.div`
     position: relative;
     margin-bottom: 40px;
@@ -35,7 +35,7 @@ export const SectionTitleTwo = styled.div`
         height: 1px;
         width: 100%;
     }
-`
+`;
 export const Title = styled.h2`
     color: #0f034a;
     background: #fff;
@@ -61,7 +61,7 @@ export const Title = styled.h2`
         top: 50%;
         position: absolute;
         height: 90%;
-        width: 50px;transform: translateY(-50%); 
+        width: 50px;
+        transform: translateY(-50%);
     }
-`
-
+`;

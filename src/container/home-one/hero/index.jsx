@@ -1,22 +1,20 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import HeroCategory from '@components/hero-category';
-import { graphql, useStaticQuery } from "gatsby";
-import { StaticImage} from "gatsby-plugin-image";
-import { Link } from 'gatsby';
-import HeroBlogPost from '../../../components/hero-blog-post';
-import { 
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import HeroCategory from "@components/hero-category";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+
+import HeroBlogPost from "../../../components/hero-blog-post";
+import {
     HeroOneArea,
     HeroInnerArea,
     HeroCategoryArea,
     HeroBlogPostArea,
-    HeroBannerArea
+    HeroBannerArea,
 } from "./style";
-
 
 const HeroOne = () => {
     const heroBlogPostQuery = useStaticQuery(graphql`
-        
         query HeroBlogPostQuery {
             categories: allCategoriesJson(limit: 4) {
                 edges {
@@ -24,14 +22,18 @@ const HeroOne = () => {
                         name
                         image {
                             childImageSharp {
-                                gatsbyImageData(width: 260, height: 110, quality: 100)
+                                gatsbyImageData(
+                                    width: 260
+                                    height: 110
+                                    quality: 100
+                                )
                             }
                         }
                     }
                 }
             }
-            heroBlogPost:allMarkdownRemark(
-                sort: {fields: [frontmatter___date], order: DESC},
+            heroBlogPost: allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
                 limit: 2
             ) {
                 edges {
@@ -47,7 +49,11 @@ const HeroOne = () => {
                             is_featured
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 750, height: 400,quality: 100)
+                                    gatsbyImageData(
+                                        width: 750
+                                        height: 400
+                                        quality: 100
+                                    )
                                 }
                             }
                             author {
@@ -66,7 +72,7 @@ const HeroOne = () => {
         }
     `);
     const heroBlogPost = heroBlogPostQuery.heroBlogPost.edges;
-    const {categories} = heroBlogPostQuery
+    const { categories } = heroBlogPostQuery;
 
     return (
         <HeroOneArea>
@@ -75,8 +81,8 @@ const HeroOne = () => {
                     <Col lg={12}>
                         <HeroInnerArea>
                             <HeroCategoryArea>
-                                {categories.edges.map(cat => (
-                                    <HeroCategory 
+                                {categories.edges.map((cat) => (
+                                    <HeroCategory
                                         key={cat.node.name}
                                         name={cat.node.name}
                                         image={cat.node.image}
@@ -86,33 +92,47 @@ const HeroOne = () => {
 
                             <HeroBannerArea>
                                 <Link to="/">
-                                    <StaticImage src="../../../data/images/hero/hero-01.jpg" alt=""/>
+                                    <StaticImage
+                                        src="../../../data/images/hero/hero-01.jpg"
+                                        alt=""
+                                    />
                                 </Link>
                             </HeroBannerArea>
 
                             <HeroBlogPostArea>
-                                {heroBlogPost && heroBlogPost.map((post, i) => {  
-                                    return(
-                                        <HeroBlogPost
-                                            key={`heropost-${i}`}
-                                            title={post.node.frontmatter.title}
-                                            categories={post.node.frontmatter.categories}
-                                            body={post.node.excerpt}
-                                            date={post.node.frontmatter.date}
-                                            authorSlug={post.node.fields.authorId}
-                                            slug={post.node.fields.slug}
-                                            dateSlug={post.node.fields.dateSlug}
-                                        />
-                                    )
-                                })}
+                                {heroBlogPost &&
+                                    heroBlogPost.map((post, i) => {
+                                        return (
+                                            <HeroBlogPost
+                                                key={`heropost-${i}`}
+                                                title={
+                                                    post.node.frontmatter.title
+                                                }
+                                                categories={
+                                                    post.node.frontmatter
+                                                        .categories
+                                                }
+                                                body={post.node.excerpt}
+                                                date={
+                                                    post.node.frontmatter.date
+                                                }
+                                                authorSlug={
+                                                    post.node.fields.authorId
+                                                }
+                                                slug={post.node.fields.slug}
+                                                dateSlug={
+                                                    post.node.fields.dateSlug
+                                                }
+                                            />
+                                        );
+                                    })}
                             </HeroBlogPostArea>
                         </HeroInnerArea>
-                        
                     </Col>
                 </Row>
             </Container>
         </HeroOneArea>
-    )
-}
+    );
+};
 
-export default HeroOne
+export default HeroOne;

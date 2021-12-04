@@ -23,10 +23,11 @@ export const createStyles = (theme, color, size, shape, variant) => css`
         font-weight: 500;
         color: #222;
         border: none;
-        &:focus{
+        &:focus {
             outline: none !important;
         }
-        &:hover,&:focus {
+        &:hover,
+        &:focus {
             background-color: ${theme.colors.primary};
             color: ${theme.colors.white};
             box-shadow: none;
@@ -57,7 +58,8 @@ export const createStyles = (theme, color, size, shape, variant) => css`
         font-size: 15px;
         color: #222;
         border: transparent;
-        &:hover,&:focus {
+        &:hover,
+        &:focus {
             background-color: ${theme.colors.offer};
             color: #fff;
         }
@@ -70,7 +72,8 @@ export const createStyles = (theme, color, size, shape, variant) => css`
         font-size: 15px;
         min-height: 45px;
         min-width: 150px;
-        &:hover,&:focus {
+        &:hover,
+        &:focus {
             background-color: #222;
             color: #fff;
         }
@@ -84,7 +87,8 @@ export const createStyles = (theme, color, size, shape, variant) => css`
     css`
         background-color: #218b00;
         color: #fff;
-        &:hover,&:focus {
+        &:hover,
+        &:focus {
             background-color: #218b00;
             color: #fff;
         }

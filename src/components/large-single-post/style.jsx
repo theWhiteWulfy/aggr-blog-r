@@ -2,7 +2,7 @@ import styled, { device } from "@theme/utils";
 
 export const LargeBlogPostWrap = styled.div`
     margin-bottom: 40px;
-`
+`;
 
 export const LargeThum = styled.div`
     a {
@@ -11,10 +11,8 @@ export const LargeThum = styled.div`
             border-radius: 10px;
         }
     }
-`
-export const AuthorBlogPostContent = styled.div`
-    
-`
+`;
+export const AuthorBlogPostContent = styled.div``;
 export const BlogDetailsMetaBox = styled.div`
     margin-top: 20px;
     margin-bottom: 5px;
@@ -25,13 +23,9 @@ export const BlogDetailsMetaBox = styled.div`
     ${device.small} {
         flex-direction: row;
     }
-`
+`;
 
-
-
-export const PostMetaLeftSide = styled.div`
-
-`
+export const PostMetaLeftSide = styled.div``;
 export const BlogPostCategory = styled.span`
     a {
         height: 50px;
@@ -41,14 +35,12 @@ export const BlogPostCategory = styled.span`
         display: inline-block;
         border-radius: 10px;
     }
-`
+`;
 export const BlogPostAuthor = styled.span`
     margin-left: 15px;
-`
+`;
 
-export const PostMetaRightSide = styled.div`
-
-`
+export const PostMetaRightSide = styled.div``;
 
 export const PostDate = styled.span`
     position: relative;
@@ -71,17 +63,13 @@ export const PostDate = styled.span`
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-`
+`;
 export const PostReadTime = styled.span`
     font-size: 13px;
-`
+`;
 
-export const Title = styled.h3`
-
-`
-export const DescText = styled.p`
-
-`
+export const Title = styled.h3``;
+export const DescText = styled.p``;
 export const LargeBlogPostbottom = styled.div`
     display: flex;
     justify-content: space-between;
@@ -89,19 +77,18 @@ export const LargeBlogPostbottom = styled.div`
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     margin-top: 20px;
-`
+`;
 export const LargeBlogPostAction = styled.div`
     display: flex;
     padding: 0px 20px;
     margin: 20px 0;
-`
+`;
 export const AuthorAction = styled.span`
     margin-right: 10px;
     margin-left: 10px;
     display: flex;
     align-items: center;
-`
+`;
 export const CountNumber = styled.span`
     margin-left: 5px;
-`
-
+`;

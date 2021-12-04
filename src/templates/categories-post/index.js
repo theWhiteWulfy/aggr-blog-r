@@ -7,20 +7,14 @@ import PageBreadcrumb from "@components/pagebreadcrumb";
 import { graphql } from "gatsby";
 import { Row, Container, Col } from "react-bootstrap";
 import LargeSinglePosts from "../../components/large-single-post";
-import LatestPostArea from '../../container/latest-post';
-import { 
-    BlogDetailsArea,
-    BlogDetailsRightSidebar 
-} from "./style";
+import LatestPostArea from "../../container/latest-post";
+import { BlogDetailsArea, BlogDetailsRightSidebar } from "./style";
 
 const CategorisPosts = ({ data, location, pageContext }) => {
     return (
         <Layout>
             <SEO title={"Blog Categories Post"} pathname="/" />
-            <PageBreadcrumb
-                pageContext={pageContext}
-                location={location}
-            />
+            <PageBreadcrumb pageContext={pageContext} location={location} />
             <BlogDetailsArea>
                 <Container>
                     <Row className="gx-5">
@@ -30,19 +24,31 @@ const CategorisPosts = ({ data, location, pageContext }) => {
                                     return (
                                         <Col lg={12} key={i}>
                                             <LargeSinglePosts
-                                                title={blog.node.frontmatter.title}
+                                                title={
+                                                    blog.node.frontmatter.title
+                                                }
                                                 thume_image={
-                                                    blog.node.frontmatter.thume_image
+                                                    blog.node.frontmatter
+                                                        .thume_image
                                                 }
                                                 categories={
-                                                    blog.node.frontmatter.categories
+                                                    blog.node.frontmatter
+                                                        .categories
                                                 }
                                                 body={blog.node.excerpt}
-                                                date={blog.node.frontmatter.date}
+                                                date={
+                                                    blog.node.frontmatter.date
+                                                }
                                                 slug={blog.node.fields.slug}
-                                                authorSlug={blog.node.fields.authorId}
-                                                authorId={blog.node.fields.authorId}
-                                                dateSlug={blog.node.fields.dateSlug}
+                                                authorSlug={
+                                                    blog.node.fields.authorId
+                                                }
+                                                authorId={
+                                                    blog.node.fields.authorId
+                                                }
+                                                dateSlug={
+                                                    blog.node.fields.dateSlug
+                                                }
                                             />
                                         </Col>
                                     );
@@ -50,14 +56,15 @@ const CategorisPosts = ({ data, location, pageContext }) => {
                             </Row>
                         </Col>
                         <Col lg={4} md={5}>
-                            <BlogDetailsRightSidebar sx={{ mt: "-40px !important"}}>
-                                <LatestPostArea/>
+                            <BlogDetailsRightSidebar
+                                sx={{ mt: "-40px !important" }}
+                            >
+                                <LatestPostArea />
                             </BlogDetailsRightSidebar>
                         </Col>
                     </Row>
                 </Container>
             </BlogDetailsArea>
-            
         </Layout>
     );
 };
@@ -72,7 +79,7 @@ export const CategorieQuery = graphql`
     query($cat: String!) {
         allMarkdownRemark(
             sort: { fields: frontmatter___date, order: DESC }
-            filter: {fields: {cats: { in: [$cat]}}}
+            filter: { fields: { cats: { in: [$cat] } } }
         ) {
             edges {
                 node {

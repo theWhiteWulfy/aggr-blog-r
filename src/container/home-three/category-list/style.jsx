@@ -1,25 +1,23 @@
-import styled, {themeGet, device } from "@theme/utils";
+import styled, { themeGet, device } from "@theme/utils";
 export const MostpopularCategoryArea = styled.div`
     padding-top: 60px;
-    ${device.medium}{
+    ${device.medium} {
         padding-top: 80px;
     }
-    ${device.large}{
+    ${device.large} {
         padding-top: 120px;
     }
-`
+`;
 export const SectionTitle = styled.div`
     text-align: center;
     margin-bottom: 40px;
-`
-export const Title = styled.h2`
-
-`
+`;
+export const Title = styled.h2``;
 export const HeroThreeCategory = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     a {
         margin: 10px;
         text-align: center;
@@ -31,7 +29,7 @@ export const HeroThreeCategory = styled.div`
         border: none;
         padding: 0 30px;
         display: inline-block;
-        ${device.xlarge}{
+        ${device.xlarge} {
             height: 66px;
             line-height: 66px;
             min-width: 200px;
@@ -41,4 +39,4 @@ export const HeroThreeCategory = styled.div`
             color: #fff;
         }
     }
-`
+`;

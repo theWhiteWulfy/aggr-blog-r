@@ -1,5 +1,4 @@
-
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleMostPopulerItem,
@@ -11,15 +10,22 @@ import {
     PostMeta,
     PostDate,
     PostReadTime,
-} from './style'
+} from "./style";
 
-const ReacentArticalVerticalPost = ({thume_image, title, authorSlug ,dateSlug, slug, body}) => {
+const ReacentArticalVerticalPost = ({
+    thume_image,
+    title,
+    authorSlug,
+    dateSlug,
+    slug,
+    body,
+}) => {
     const image = getImage(thume_image);
     return (
         <SingleMostPopulerItem>
-            <MostPopulerThum >
+            <MostPopulerThum>
                 <Link to={`/${slug}`}>
-                    <GatsbyImage image={image} alt={title}/>
+                    <GatsbyImage image={image} alt={title} />
                 </Link>
             </MostPopulerThum>
             <MostPopulerContent>
@@ -38,7 +44,7 @@ const ReacentArticalVerticalPost = ({thume_image, title, authorSlug ,dateSlug, s
                 </PostMeta>
             </MostPopulerContent>
         </SingleMostPopulerItem>
-    )
-}
+    );
+};
 
-export default ReacentArticalVerticalPost
+export default ReacentArticalVerticalPost;

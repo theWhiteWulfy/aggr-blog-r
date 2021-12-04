@@ -1,16 +1,14 @@
 import styled, { device, themeGet } from "@theme/utils";
 
-
 export const PageBreadcrumbWrap = styled.div`
     background-color: #fafafa;
     padding: 60px 0;
-    ${device.medium}{
+    ${device.medium} {
         padding: 80px 0;
     }
 `;
 
 export const PageTitleContent = styled.div`
-    
     & .breadcrumb {
         display: flex;
         flex-wrap: wrap;

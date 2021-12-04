@@ -91,10 +91,16 @@ Button.propTypes = {
         "border-gradient",
         "border-normal",
         "bgSuccess",
-        "bg-white"
+        "bg-white",
     ]),
     size: PropTypes.oneOf(["xsmall", "small", "medium", "large", "fullwidth"]),
-    shape: PropTypes.oneOf(["square", "rounded-10", "rounded-15", "rounded", "oval"]),
+    shape: PropTypes.oneOf([
+        "square",
+        "rounded-10",
+        "rounded-15",
+        "rounded",
+        "oval",
+    ]),
     variant: PropTypes.oneOf(["outlined", "iconButton"]),
     path: PropTypes.string,
     label: PropTypes.string,
@@ -104,7 +110,7 @@ Button.defaultProps = {
     type: "button",
     size: "medium",
     shape: "rounded",
-    color: "primary"
+    color: "primary",
 };
 
 export default Button;

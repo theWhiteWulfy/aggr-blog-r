@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
-import {GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleBannerBlogPost,
     SpecialBannerPostImage,
@@ -8,19 +8,26 @@ import {
     Title,
     BannerPostMeta,
     PostDate,
-    ReadTime
-
-} from './style'
-const SpecialBannerTwo = ({thume_image, title, body, date, authorSlug, dateSlug, slug}) => {
+    ReadTime,
+} from "./style";
+const SpecialBannerTwo = ({
+    thume_image,
+    title,
+    body,
+    date,
+    authorSlug,
+    dateSlug,
+    slug,
+}) => {
     const image = getImage(thume_image);
     return (
         <SingleBannerBlogPost>
             <SpecialBannerPostImage>
                 <Link to={`/${slug}`}>
-                    <GatsbyImage image={image} alt="Banner Blog image"/>
+                    <GatsbyImage image={image} alt="Banner Blog image" />
                 </Link>
             </SpecialBannerPostImage>
-            
+
             <SpecialBannerPostContent>
                 <BannerPostAuthor>
                     By <Link to={`/profile/${authorSlug}`}>{authorSlug}</Link>
@@ -36,7 +43,7 @@ const SpecialBannerTwo = ({thume_image, title, body, date, authorSlug, dateSlug,
                 </BannerPostMeta>
             </SpecialBannerPostContent>
         </SingleBannerBlogPost>
-    )
-}
+    );
+};
 
-export default SpecialBannerTwo
+export default SpecialBannerTwo;

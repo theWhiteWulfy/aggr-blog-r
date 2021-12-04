@@ -1,8 +1,8 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { graphql, useStaticQuery } from 'gatsby'
-import {StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
-import Button from "../../../components/shared/button"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import Button from "../../../components/shared/button";
 
 import {
     AboutHistoryArea,
@@ -15,16 +15,13 @@ import {
     PlatformContentBox,
     PlateformImageBox,
     PlateforemImage,
-    PlatformBoxButton
-
-} from './style'
+    PlatformBoxButton,
+} from "./style";
 
 const AboutPlatform = () => {
-
-
     const aboutPlatformQuery = useStaticQuery(graphql`
         query AboutPlatformQuery {
-            aboutUsJson(id: {eq: "about-us-pages"}) {
+            aboutUsJson(id: { eq: "about-us-pages" }) {
                 id
                 about_us_platform {
                     id
@@ -50,14 +47,18 @@ const AboutPlatform = () => {
                 }
             }
         }
-      
-    `)
+    `);
 
     const {
         about_us_platform: { image1, title, text1, text2 },
-        about_us_digital_publishing: { image2: pub_image, title: pub_title, text1: pub_text1, text2: pub_text2 }
+        about_us_digital_publishing: {
+            image2: pub_image,
+            title: pub_title,
+            text1: pub_text1,
+            text2: pub_text2,
+        },
     } = aboutPlatformQuery.aboutUsJson;
-    
+
     const imageitem1 = getImage(image1);
     const image2 = getImage(pub_image);
 
@@ -68,7 +69,7 @@ const AboutPlatform = () => {
                     <Col lg={4}>
                         <SinglePlatformBox>
                             <PlatformIcon>
-                                <GatsbyImage image={imageitem1} alt={title}/>
+                                <GatsbyImage image={imageitem1} alt={title} />
                             </PlatformIcon>
                             <PlatformContent>
                                 <Title>{title}</Title>
@@ -81,7 +82,10 @@ const AboutPlatform = () => {
                         <SinglePlatformBox className="platform-d-flex">
                             <PlatformContentBox>
                                 <PlatformIcon>
-                                    <GatsbyImage image={image2} alt={pub_title}/>
+                                    <GatsbyImage
+                                        image={image2}
+                                        alt={pub_title}
+                                    />
                                 </PlatformIcon>
                                 <PlatformContent>
                                     <Title>{pub_title}</Title>
@@ -91,14 +95,18 @@ const AboutPlatform = () => {
                             </PlatformContentBox>
                             <PlateformImageBox>
                                 <PlateforemImage>
-                                    <StaticImage src="../../../data/images/banners/about-ex-share.jpg" alt=""/>
+                                    <StaticImage
+                                        src="../../../data/images/banners/about-ex-share.jpg"
+                                        alt=""
+                                    />
                                     <PlatformBoxButton>
-                                        <Button 
-                                            path="/contact-us" 
-                                            size="large" 
+                                        <Button
+                                            path="/contact-us"
+                                            size="large"
                                             shape="rounded-10"
                                         >
-                                            Share your thinking <i className="icofont-long-arrow-right"></i>
+                                            Share your thinking{" "}
+                                            <i className="icofont-long-arrow-right"></i>
                                         </Button>
                                     </PlatformBoxButton>
                                 </PlateforemImage>
@@ -108,7 +116,7 @@ const AboutPlatform = () => {
                 </Row>
             </Container>
         </AboutHistoryArea>
-    )
-}
+    );
+};
 
-export default AboutPlatform
+export default AboutPlatform;

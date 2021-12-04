@@ -1,6 +1,6 @@
 import styled, { device } from "@theme/utils";
 
-import NewsletterBgFour from '../../data/images/banners/home-four-newsletter-bg.jpg'
+import NewsletterBgFour from "../../data/images/banners/home-four-newsletter-bg.jpg";
 
 export const NewsletterSubscribeInner = styled.div`
     background-color: #ddd;
@@ -9,33 +9,33 @@ export const NewsletterSubscribeInner = styled.div`
     border-radius: 10px;
     background-size: cover;
     background-position: center;
-    padding:  40px 20px;
+    padding: 40px 20px;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    ${device.large}{
+    ${device.large} {
         padding: 70px;
     }
-`
+`;
 export const Title = styled.h2`
     color: #ffffff;
     font-weight: 500;
     margin-bottom: 10px;
     font-size: 28px;
-    ${device.large}{
+    ${device.large} {
         font-size: 44px;
     }
-`
+`;
 export const DecText = styled.p`
     color: #ffffff;
     font-size: 18px;
-    ${device.large}{
+    ${device.large} {
         font-size: 25px;
     }
-`
+`;
 export const SectionTitle = styled.div`
     text-align: center;
-`
+`;
 export const NewsletterInputBox = styled.div`
     z-index: 1;
     position: relative;
@@ -43,11 +43,11 @@ export const NewsletterInputBox = styled.div`
     justify-content: center;
     margin-top: 10px;
     flex-direction: column;
-    ${device.small}{
+    ${device.small} {
         flex-direction: row;
         margin-top: 30px;
     }
-`
+`;
 
 export const NewsletterInput = styled.input`
     max-width: 100%;
@@ -61,35 +61,36 @@ export const NewsletterInput = styled.input`
     margin-top: 30px;
     color: #fff;
     margin-bottom: 20px;
-    &::-webkit-input-placeholder { /* Edge */
+    &::-webkit-input-placeholder {
+        /* Edge */
         color: #fff;
     }
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
         color: #fff;
     }
     &::placeholder {
         color: #fff;
-    } 
-    ${device.small}{
+    }
+    ${device.small} {
         max-width: 270px;
         margin-top: 0px;
         margin-bottom: 0px;
     }
 
-    ${device.medium}{
+    ${device.medium} {
         max-width: 300px;
     }
 
-    ${device.large}{
+    ${device.large} {
         max-width: 400px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         max-width: 450px;
     }
-
-`
+`;
 export const ButtonBox = styled.div`
     a {
         color: #fff;
     }
-`
+`;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
     OffcanvasSearch,
     OffcanvasSearchBox,
@@ -6,27 +6,31 @@ import {
     SearchOverlayForm,
     MobileNavigationClose,
     Form,
-    Input
-} from './style'
+    Input,
+} from "./style";
 
-const SearchPopup = ({ofcanvasSearchOpen, SearchHandaler}) => {
+const SearchPopup = ({ ofcanvasSearchOpen, SearchHandaler }) => {
     return (
-        <OffcanvasSearch className={`main-search-active ${ofcanvasSearchOpen ? "inside" : ""}`}>
+        <OffcanvasSearch
+            className={`main-search-active ${
+                ofcanvasSearchOpen ? "inside" : ""
+            }`}
+        >
             <OffcanvasSearchBox>
                 <SearchRemove>
-                    <MobileNavigationClose onKeyDown={SearchHandaler} onClick={SearchHandaler}></MobileNavigationClose>
+                    <MobileNavigationClose
+                        onKeyDown={SearchHandaler}
+                        onClick={SearchHandaler}
+                    ></MobileNavigationClose>
                 </SearchRemove>
                 <SearchOverlayForm>
                     <Form action="#">
-                        <Input 
-                          type="text"
-                          placeholder="Search"
-                        />
+                        <Input type="text" placeholder="Search" />
                     </Form>
                 </SearchOverlayForm>
             </OffcanvasSearchBox>
         </OffcanvasSearch>
-    )
-}
+    );
+};
 
-export default SearchPopup
+export default SearchPopup;

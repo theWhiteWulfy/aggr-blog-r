@@ -2,7 +2,15 @@ import styled, { css } from "@theme/utils";
 
 export const StyledSocial = styled.div``;
 
-export const createStyles = (theme, dir, variant, shape, bgColor, size, space) => css`
+export const createStyles = (
+    theme,
+    dir,
+    variant,
+    shape,
+    bgColor,
+    size,
+    space
+) => css`
     ${dir === "horizontal" &&
     css`
         display: inline-block;

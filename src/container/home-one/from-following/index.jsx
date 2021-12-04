@@ -1,29 +1,30 @@
-import React from 'react'
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Container, Row, Col } from 'react-bootstrap'
-import { StaticImage} from "gatsby-plugin-image";
+import { Container, Row, Col } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import SingleFollowingPosts from '../../../components/single-following-post';
-import PostAuthorBox from '../../../components/post-author';
+import SingleFollowingPosts from "../../../components/single-following-post";
+import PostAuthorBox from "../../../components/post-author";
 
-import { 
+import {
     FromFollowingWrap,
     FromFollowingHaderArea,
     FollowingSliderNavigation,
     FromFollowingLeftSide,
     FromFollowingRightSide,
-    FollowingAddBanner
-
+    FollowingAddBanner,
 } from "./style";
 
-function isObjectHasKey(obj, objKey){
-    return Object.keys(obj).findIndex(key => key === objKey)
+function isObjectHasKey(obj, objKey) {
+    return Object.keys(obj).findIndex((key) => key === objKey);
 }
 
 const FromFollowingArea = ({}) => {
     const fromFollowingQuery = useStaticQuery(graphql`
         query FromFollowingQuery {
-            allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+            allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+            ) {
                 edges {
                     node {
                         id
@@ -37,7 +38,11 @@ const FromFollowingArea = ({}) => {
                             is_featured
                             thume_image {
                                 childImageSharp {
-                                    gatsbyImageData(width: 750, height: 400, quality: 100)
+                                    gatsbyImageData(
+                                        width: 750
+                                        height: 400
+                                        quality: 100
+                                    )
                                 }
                             }
                             author {
@@ -54,7 +59,12 @@ const FromFollowingArea = ({}) => {
                                 }
                                 image {
                                     childImageSharp {
-                                        gatsbyImageData(layout: FIXED, width: 80, height: 80, quality: 100)
+                                        gatsbyImageData(
+                                            layout: FIXED
+                                            width: 80
+                                            height: 80
+                                            quality: 100
+                                        )
                                     }
                                 }
                             }
@@ -72,18 +82,18 @@ const FromFollowingArea = ({}) => {
     `);
     const fromFollowingData = fromFollowingQuery.allMarkdownRemark.edges;
     let postsByAuthor = {};
-    
-    fromFollowingData.forEach(data => {
-        const {authorId} = data.node.fields
+
+    fromFollowingData.forEach((data) => {
+        const { authorId } = data.node.fields;
 
         const keyIndex = isObjectHasKey(postsByAuthor, authorId);
-        if(keyIndex < 0) {
+        if (keyIndex < 0) {
             postsByAuthor = {
                 ...postsByAuthor,
-                [authorId]: [data]
-            }
+                [authorId]: [data],
+            };
         } else {
-            postsByAuthor[authorId].push(data)
+            postsByAuthor[authorId].push(data);
         }
     });
     return (
@@ -115,7 +125,7 @@ const FromFollowingArea = ({}) => {
                     }}
                     navigation={{
                         nextEl: ".following-slider-button-next",
-                        prevEl: ".following-slider-button-prev"
+                        prevEl: ".following-slider-button-prev",
                     }}
                     slidesPerView={1}
                     spaceBetween={0}
@@ -126,51 +136,111 @@ const FromFollowingArea = ({}) => {
                                 <Row className="gx-5">
                                     <FromFollowingLeftSide className="col">
                                         <Row className="gx-5">
-                                            {postsByAuthor[key].slice(0, 4).map((post, i) => {
-                                                return (
-                                                    <Col md={6} sm={6} key={i}>
-                                                        <SingleFollowingPosts
-                                                            title={post.node.frontmatter.title}
-                                                            thume_image={post.node.frontmatter.thume_image}
-                                                            categories={post.node.frontmatter.categories}
-                                                            body={post.node.excerpt}
-                                                            date={post.node.frontmatter.date}
-                                                            authorSlug={post.node.fields.authorId}
-                                                            slug={post.node.fields.slug}
-                                                            authorId={post.node.frontmatter.author.name}
-                                                            dateSlug={post.node.fields.dateSlug}
-                                                        />
-                                                    </Col>     
-                                                )
-                                            })}
-
+                                            {postsByAuthor[key]
+                                                .slice(0, 4)
+                                                .map((post, i) => {
+                                                    return (
+                                                        <Col
+                                                            md={6}
+                                                            sm={6}
+                                                            key={i}
+                                                        >
+                                                            <SingleFollowingPosts
+                                                                title={
+                                                                    post.node
+                                                                        .frontmatter
+                                                                        .title
+                                                                }
+                                                                thume_image={
+                                                                    post.node
+                                                                        .frontmatter
+                                                                        .thume_image
+                                                                }
+                                                                categories={
+                                                                    post.node
+                                                                        .frontmatter
+                                                                        .categories
+                                                                }
+                                                                body={
+                                                                    post.node
+                                                                        .excerpt
+                                                                }
+                                                                date={
+                                                                    post.node
+                                                                        .frontmatter
+                                                                        .date
+                                                                }
+                                                                authorSlug={
+                                                                    post.node
+                                                                        .fields
+                                                                        .authorId
+                                                                }
+                                                                slug={
+                                                                    post.node
+                                                                        .fields
+                                                                        .slug
+                                                                }
+                                                                authorId={
+                                                                    post.node
+                                                                        .frontmatter
+                                                                        .author
+                                                                        .name
+                                                                }
+                                                                dateSlug={
+                                                                    post.node
+                                                                        .fields
+                                                                        .dateSlug
+                                                                }
+                                                            />
+                                                        </Col>
+                                                    );
+                                                })}
                                         </Row>
                                     </FromFollowingLeftSide>
 
                                     <FromFollowingRightSide className="col">
-                                        <PostAuthorBox 
-                                            postAuthorImage={postsByAuthor[key][0].node.frontmatter.author.image}
-                                            postAuthorName={postsByAuthor[key][0].node.frontmatter.author.name}
-                                            postAuthorBio={postsByAuthor[key][0].node.frontmatter.author.bio}
-                                            postAuthordescription={postsByAuthor[key][0].node.frontmatter.author.description}
-                                            authorSlug={postsByAuthor[key][0].node.frontmatter.author.fields.authorId}
+                                        <PostAuthorBox
+                                            postAuthorImage={
+                                                postsByAuthor[key][0].node
+                                                    .frontmatter.author.image
+                                            }
+                                            postAuthorName={
+                                                postsByAuthor[key][0].node
+                                                    .frontmatter.author.name
+                                            }
+                                            postAuthorBio={
+                                                postsByAuthor[key][0].node
+                                                    .frontmatter.author.bio
+                                            }
+                                            postAuthordescription={
+                                                postsByAuthor[key][0].node
+                                                    .frontmatter.author
+                                                    .description
+                                            }
+                                            authorSlug={
+                                                postsByAuthor[key][0].node
+                                                    .frontmatter.author.fields
+                                                    .authorId
+                                            }
                                         />
 
                                         <FollowingAddBanner>
-                                            <a href="#" >
-                                                <StaticImage src="../../../data/images/banners/home-following-banner.png" alt=""/>
+                                            <a href="#">
+                                                <StaticImage
+                                                    src="../../../data/images/banners/home-following-banner.png"
+                                                    alt=""
+                                                />
                                             </a>
                                         </FollowingAddBanner>
                                     </FromFollowingRightSide>
                                 </Row>
                             </SwiperSlide>
-                        )
+                        );
                     })}
                 </Swiper>
-            </Container>    
+            </Container>
         </FromFollowingWrap>
-    )
-}
+    );
+};
 
-
-export default FromFollowingArea
+export default FromFollowingArea;

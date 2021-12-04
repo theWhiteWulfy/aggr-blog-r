@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Row, Col } from 'react-bootstrap'
-import {graphql, useStaticQuery } from "gatsby";
+import { Container, Row, Col } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 import { slugify } from "@utils/functions";
-import Button from '@components/shared/button'
-import { StaticImage} from "gatsby-plugin-image";
-import { 
+import Button from "@components/shared/button";
+import { StaticImage } from "gatsby-plugin-image";
+import {
     HeroAreaWrapper,
     HeroTwoArea,
     HeroAreaTwoInnter,
@@ -13,9 +13,8 @@ import {
     HeroTwoBanner,
     ShorTitle,
     Title,
-    SubTitle
+    SubTitle,
 } from "./style";
-
 
 const HeroTwo = () => {
     const heroTwoPostQuery = useStaticQuery(graphql`
@@ -27,7 +26,7 @@ const HeroTwo = () => {
                     }
                 }
             }
-            heroJson(id: {eq: "hero-two"}) {
+            heroJson(id: { eq: "hero-two" }) {
                 id
                 hero_two {
                     shortTitle
@@ -39,9 +38,9 @@ const HeroTwo = () => {
     `);
 
     const {
-        hero_two: {shortTitle, title, subTitle}
+        hero_two: { shortTitle, title, subTitle },
     } = heroTwoPostQuery.heroJson;
-    const {categories} = heroTwoPostQuery
+    const { categories } = heroTwoPostQuery;
     return (
         <HeroAreaWrapper>
             <HeroTwoArea>
@@ -53,21 +52,30 @@ const HeroTwo = () => {
                                 <Title>{title}</Title>
                                 <SubTitle>{subTitle}</SubTitle>
                                 <HeroTwoTag>
-                                    {categories && categories.edges.map((catItem, i)=>{ 
-                                        return (
-                                            <Button 
-                                                sx={{
-                                                    border: "2px solid #fff",
-                                                    lineHeight: "46px",
-                                                    padding: ['0 15px','0 35px' ]
-                                                }}
-                                                key={i} 
-                                                shape="rounded-10"
-                                                variant="outlined"
-                                                path={`/category/${slugify(catItem.node.name)}`}
-                                            >{catItem.node.name}</Button>  
-                                        )
-                                    })}
+                                    {categories &&
+                                        categories.edges.map((catItem, i) => {
+                                            return (
+                                                <Button
+                                                    sx={{
+                                                        border:
+                                                            "2px solid #fff",
+                                                        lineHeight: "46px",
+                                                        padding: [
+                                                            "0 15px",
+                                                            "0 35px",
+                                                        ],
+                                                    }}
+                                                    key={i}
+                                                    shape="rounded-10"
+                                                    variant="outlined"
+                                                    path={`/category/${slugify(
+                                                        catItem.node.name
+                                                    )}`}
+                                                >
+                                                    {catItem.node.name}
+                                                </Button>
+                                            );
+                                        })}
                                 </HeroTwoTag>
                             </HeroAreaTwoInnter>
                         </Col>
@@ -75,10 +83,13 @@ const HeroTwo = () => {
                 </Container>
             </HeroTwoArea>
             <HeroTwoBanner>
-                <StaticImage src="../../../data/images/banners/hero-text-banner.png" alt=""/>
+                <StaticImage
+                    src="../../../data/images/banners/hero-text-banner.png"
+                    alt=""
+                />
             </HeroTwoBanner>
         </HeroAreaWrapper>
-    )
-}
+    );
+};
 
-export default HeroTwo
+export default HeroTwo;

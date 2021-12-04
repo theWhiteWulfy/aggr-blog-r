@@ -21,15 +21,14 @@ export const SingleTrendingTopicItem = styled.div`
             height: 50%;
             display: block;
             z-index: 1;
-            content: '';
+            content: "";
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #333 100%);
             transition: opacity 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
             cursor: pointer;
             border-radius: 15px;
         }
     }
-    
-`
+`;
 export const Title = styled.h4`
     position: absolute;
     bottom: 20px;
@@ -37,4 +36,4 @@ export const Title = styled.h4`
     width: 100%;
     color: #fff;
     z-index: 2;
-`
+`;

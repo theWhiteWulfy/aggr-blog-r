@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Layout from "@layout";
 import SEO from "@components/seo";
-import PageBreadcrumb from '../components/pagebreadcrumb'
+import PageBreadcrumb from "../components/pagebreadcrumb";
 import AboutUsVideoArea from "../container/about-us/about-us-video-banner";
 import AboutPlatform from "../container/about-us/about-platform";
 import GagarathHistoryArea from "../container/about-us/gagarath-history";
@@ -18,11 +18,11 @@ const AboutUsPage = ({ location, pageContext }) => {
                 location={location}
                 title="About Us"
             />
-            <AboutUsVideoArea/>
-            <AboutPlatform/>
-            <GagarathHistoryArea/>
-            <TeamMembersArea/>
-            <TestimonialArea/>
+            <AboutUsVideoArea />
+            <AboutPlatform />
+            <GagarathHistoryArea />
+            <TeamMembersArea />
+            <TestimonialArea />
         </Layout>
     );
 };
@@ -32,8 +32,3 @@ AboutUsPage.propTypes = {
 };
 
 export default AboutUsPage;
-
-
-
-
-

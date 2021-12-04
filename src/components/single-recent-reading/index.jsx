@@ -1,18 +1,16 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
     SingleRecentReadingPost,
     RecentReadingPostThum,
-    RecentReadingPostContent, 
+    RecentReadingPostContent,
     RecentReadingPostAuthor,
     Title,
     RecentReadingPostMeta,
     PostDate,
-    PostRiadTime
-
-
-} from './style'
+    PostRiadTime,
+} from "./style";
 
 const SingleRecentReading = () => {
     return (
@@ -25,21 +23,20 @@ const SingleRecentReading = () => {
                     By <Link to="/">Kathy Ramirez</Link>
                 </RecentReadingPostAuthor>
                 <Title>
-                    <Link to="/">With WooLentor's drag-
-                        and-drop interface for...
+                    <Link to="/">
+                        With WooLentor's drag- and-drop interface for...
                     </Link>
                 </Title>
                 <RecentReadingPostMeta>
                     <PostDate>
-                        <i className="icofont-ui-calendar"></i> 
+                        <i className="icofont-ui-calendar"></i>
                         <a href="#">03-04-2021</a>
                     </PostDate>
                     <PostRiadTime>10 min read</PostRiadTime>
                 </RecentReadingPostMeta>
             </RecentReadingPostContent>
         </SingleRecentReadingPost>
+    );
+};
 
-    )
-}
-
-export default SingleRecentReading
+export default SingleRecentReading;

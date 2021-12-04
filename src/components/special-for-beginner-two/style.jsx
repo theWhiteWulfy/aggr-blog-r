@@ -1,9 +1,8 @@
-import styled, {themeGet, device } from "@theme/utils";
+import styled, { themeGet, device } from "@theme/utils";
 
 export const SingleBannerBlogPost = styled.div`
     margin-top: 30px;
-    
-`
+`;
 export const SpecialBannerPostImage = styled.div`
     a {
         display: block;
@@ -11,28 +10,23 @@ export const SpecialBannerPostImage = styled.div`
             border-radius: 10px;
         }
     }
-`
-export const SingleSpecialBannerPost = styled.div`
-    
-`
+`;
+export const SingleSpecialBannerPost = styled.div``;
 export const SpecialBannerPostContent = styled.div`
     margin-top: 20px;
-    
-`
+`;
 export const BannerPostAuthor = styled.div`
     color: #9b9ea1;
     font-weight: 600;
     margin-bottom: 10px;
-`
-export const Title = styled.h3`
-    
-`
+`;
+export const Title = styled.h3``;
 export const DecText = styled.p`
     margin-top: 10px;
-`
+`;
 export const BannerPostMeta = styled.div`
     margin-top: 10px;
-`
+`;
 export const PostDate = styled.span`
     position: relative;
     padding-right: 10px;
@@ -52,6 +46,5 @@ export const PostDate = styled.span`
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-`
-export const ReadTime = styled.span`
-`
+`;
+export const ReadTime = styled.span``;

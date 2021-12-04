@@ -1,23 +1,22 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Row, Col } from 'react-bootstrap'
-import TestimonialItems from '@components/testimonial'
+import { Container, Row, Col } from "react-bootstrap";
+import TestimonialItems from "@components/testimonial";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import { graphql, useStaticQuery } from 'gatsby';
-import NewsletterSubscribeOne from '../../../components/newsletter-subscribe';
+import { graphql, useStaticQuery } from "gatsby";
+import NewsletterSubscribeOne from "../../../components/newsletter-subscribe";
 import {
     BgGrayColor,
     TestimonialWrap,
-    TestimonialSliderArea, 
+    TestimonialSliderArea,
     TestimonialSliderNavigationTwo,
-    NavigationButton
-} from './style'
+    NavigationButton,
+} from "./style";
 
 const TestimonialArea = () => {
-
     const testimonialQuery = useStaticQuery(graphql`
         query TestimonialQuery {
-            testimonialJson(id: {eq: "testimonial-area"}) {
+            testimonialJson(id: { eq: "testimonial-area" }) {
                 section_title {
                     title
                     subTitle
@@ -35,21 +34,22 @@ const TestimonialArea = () => {
                 }
             }
         }
-      
-    `)
+    `);
     const {
         section_title: { title, subTitle },
-        testimonial
+        testimonial,
     } = testimonialQuery.testimonialJson;
 
     return (
         <BgGrayColor>
-            <TestimonialWrap sx={{pb: ["80px", "100px"]}}>
+            <TestimonialWrap sx={{ pb: ["80px", "100px"] }}>
                 <Container>
                     <Row>
                         <Col lg={12}>
                             <div className="section-title text-center">
-                                <h6 className="sub-title-primary mb-20">{subTitle}</h6>
+                                <h6 className="sub-title-primary mb-20">
+                                    {subTitle}
+                                </h6>
                                 <h2 className="title">{title}</h2>
                             </div>
                         </Col>
@@ -62,7 +62,7 @@ const TestimonialArea = () => {
                             }}
                             navigation={{
                                 nextEl: ".testimonial-button-next",
-                                prevEl: ".testimonial-button-prev"
+                                prevEl: ".testimonial-button-prev",
                             }}
                             slidesPerView={3}
                             spaceBetween={30}
@@ -81,20 +81,25 @@ const TestimonialArea = () => {
                                 },
                             }}
                         >
-                            
-                            {testimonial && testimonial.map((itemData, i) =>{
-                                return(
-                                    <SwiperSlide key={i}>
-                                        <TestimonialItems
-                                            images={itemData.images.childrenImageSharp}
-                                            name={itemData.name}
-                                            designation={itemData.designation}
-                                            title={itemData.title}
-                                            desText={itemData.desText}                         
-                                        />
-                                    </SwiperSlide>
-                                )
-                            })}
+                            {testimonial &&
+                                testimonial.map((itemData, i) => {
+                                    return (
+                                        <SwiperSlide key={i}>
+                                            <TestimonialItems
+                                                images={
+                                                    itemData.images
+                                                        .childrenImageSharp
+                                                }
+                                                name={itemData.name}
+                                                designation={
+                                                    itemData.designation
+                                                }
+                                                title={itemData.title}
+                                                desText={itemData.desText}
+                                            />
+                                        </SwiperSlide>
+                                    );
+                                })}
                         </Swiper>
 
                         <TestimonialSliderNavigationTwo>
@@ -105,15 +110,13 @@ const TestimonialArea = () => {
                                 <i className="icofont-long-arrow-right"></i>
                             </NavigationButton>
                         </TestimonialSliderNavigationTwo>
-
                     </TestimonialSliderArea>
 
-                    <NewsletterSubscribeOne/>
-
+                    <NewsletterSubscribeOne />
                 </Container>
             </TestimonialWrap>
         </BgGrayColor>
-    )
-}
+    );
+};
 
-export default TestimonialArea
+export default TestimonialArea;

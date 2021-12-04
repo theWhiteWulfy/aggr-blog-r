@@ -1,9 +1,6 @@
 import styled, { device, themeGet } from "@theme/utils";
 
-export const FooterWrap = styled.footer`
-    
-
-`;
+export const FooterWrap = styled.footer``;
 export const FooterTopArea = styled.div`
     background-color: #200b70;
 `;
@@ -13,14 +10,13 @@ export const FooterWidgetTop = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-`
+`;
 export const FooterWidgeiInfoTextBox = styled.div`
     margin-bottom: 20px;
-`
+`;
 // export const FooterWidgeiInfoTextBox = styled.div`
 //     order: 3;
 // `
-
 
 export const SubTitle = styled.h6`
     color: #fff;
@@ -28,8 +24,6 @@ export const SubTitle = styled.h6`
 export const Title = styled.h3`
     color: #fff;
 `;
-
-
 
 export const FooterMidArea = styled.div`
     background-color: #250c83;
@@ -40,31 +34,27 @@ export const FooterWidget = styled.div`
     max-width: 280px;
     &.footer-subscribe-center {
         margin-left: 0;
-        
+
         ${device.medium} {
             margin-right: 0;
             margin-left: auto;
             margin-right: auto;
         }
-        
     }
 `;
 
 export const FooterDec = styled.p`
-     color: #fff;
-`
+    color: #fff;
+`;
 
 export const FooterLogo = styled.div`
     margin-bottom: 20px;
 `;
 
-
-export const FooterSubscribeWrap = styled.div`
-    
-`
+export const FooterSubscribeWrap = styled.div``;
 export const SingleInput = styled.div`
     margin-bottom: 15px;
-`
+`;
 export const Input = styled.input`
     width: 100%;
     max-width: 300px;
@@ -75,19 +65,19 @@ export const Input = styled.input`
     border-radius: 15px;
     color: ${themeGet("colors.white")};
     height: 60px;
-    ::-webkit-input-placeholder { /* Edge */
+    ::-webkit-input-placeholder {
+        /* Edge */
         color: #fff;
     }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
         color: #fff;
     }
     ::placeholder {
         color: #fff;
     }
-`
-export const ButtonBox = styled.div`
-    
-`
+`;
+export const ButtonBox = styled.div``;
 
 export const FooterMenuWidget = styled.div`
     display: flex;
@@ -114,9 +104,7 @@ export const FooterWidgetTitle = styled.div`
 export const WidgetTitle = styled.h4`
     color: #ffffff;
 `;
-export const FooterWidgetMenuList = styled.ul`
-    
-`;
+export const FooterWidgetMenuList = styled.ul``;
 export const NavItem = styled.li`
     margin-bottom: 10px;
     a {
@@ -130,7 +118,7 @@ export const NavItem = styled.li`
 export const FooterBottomArea = styled.div`
     background: #250c83;
     padding: 20px 0;
-`
+`;
 export const FooterBottomInner = styled.div`
     display: flex;
     justify-content: center;
@@ -139,7 +127,7 @@ export const FooterBottomInner = styled.div`
     ${device.medium} {
         flex-direction: row;
     }
-`
+`;
 
 export const CopyrightText = styled.p`
     color: #f4faff;
@@ -164,4 +152,4 @@ export const CopyrightText = styled.p`
 
 export const ButtonRightBox = styled.div`
     padding: 10px 0;
-`
+`;

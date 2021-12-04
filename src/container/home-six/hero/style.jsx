@@ -3,20 +3,18 @@ import styled, { themeGet, device } from "@theme/utils";
 export const HeroSection = styled.div`
     padding: 60px 0;
     position: relative;
-    ${device.medium}{
+    ${device.medium} {
         padding: 80px 0;
     }
-    ${device.large}{
+    ${device.large} {
         padding: 120px 0;
     }
-
-`
+`;
 
 export const SliderNavigation = styled.div`
-
     .navigation-button {
         display: none;
-        ${device.medium}{
+        ${device.medium} {
             display: inherit;
             width: 50px;
             height: 50px;
@@ -39,12 +37,10 @@ export const SliderNavigation = styled.div`
                 right: 5%;
             }
             &:hover {
-                border: 2px solid ${themeGet('colors.primary')};
-                background-color: ${themeGet('colors.primary')};
+                border: 2px solid ${themeGet("colors.primary")};
+                background-color: ${themeGet("colors.primary")};
                 color: #fff;
             }
         }
     }
-
-`
-
+`;

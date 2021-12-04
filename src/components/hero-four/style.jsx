@@ -1,21 +1,23 @@
 import styled, { themeGet, device } from "@theme/utils";
 export const HeroAreaPost = styled.div`
     text-align: center;
-`
+`;
 export const Title = styled.h1`
     font-size: 28px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
     a {
         color: #fff;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         font-size: 45px;
     }
-`
+`;
 export const PostMeta = styled.div`
     font-size: 14px;
-    color: #ffffff; 
-    a {color: #ffffff; }
+    color: #ffffff;
+    a {
+        color: #ffffff;
+    }
     span {
         position: relative;
         padding-right: 10px;
@@ -37,23 +39,19 @@ export const PostMeta = styled.div`
             }
         }
     }
-`
+`;
 export const PostAuthor = styled.span`
     color: #9b9ea1;
     a {
         color: #fff;
         text-transform: capitalize;
     }
-`
-export const PostDate = styled.span`
-    
-`
+`;
+export const PostDate = styled.span``;
 export const PostReadTime = styled.span`
     color: #ffffff;
-`
-export const HeroThreeBox = styled.div`
-    
-`
+`;
+export const HeroThreeBox = styled.div``;
 export const HeroThreeBoxImage = styled.div`
     margin-bottom: 20px;
     border-radius: 20px;
@@ -62,4 +60,4 @@ export const HeroThreeBoxImage = styled.div`
     img {
         border-radius: 15px;
     }
-`
+`;

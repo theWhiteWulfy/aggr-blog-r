@@ -5,12 +5,12 @@ export const SingleMostPopulerItem = styled.div`
     &:first-of-type {
         margin-top: 45px;
     }
-    ${device.large}{
+    ${device.large} {
         &:first-of-type {
             margin-top: 0px;
         }
     }
-`
+`;
 export const MostPopulerThum = styled.div`
     display: block;
     max-width: 100%;
@@ -23,29 +23,27 @@ export const MostPopulerThum = styled.div`
         object-fit: cover !important;
     }
     & .gatsby-image-wrapper {
-            display: block !important;
+        display: block !important;
     }
-`
+`;
 export const MostPopulerContent = styled.div`
     margin-top: 15px;
-`
+`;
 export const PostAuthor = styled.div`
     color: #9b9ea1;
     font-weight: 600;
     a {
         color: #0f034a;
     }
-`
+`;
 export const Title = styled.h3`
     color: #0f034a;
     margin-top: 10px;
-`
-export const DecText = styled.p`
-
-`
+`;
+export const DecText = styled.p``;
 export const PostMeta = styled.div`
     margin-top: 10px;
-`
+`;
 export const PostDate = styled.span`
     position: relative;
     padding-right: 10px;
@@ -65,7 +63,5 @@ export const PostDate = styled.span`
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-`
-export const PostReadTime = styled.span`
-
-`
+`;
+export const PostReadTime = styled.span``;

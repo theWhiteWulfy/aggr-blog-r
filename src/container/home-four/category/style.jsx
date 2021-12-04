@@ -1,10 +1,10 @@
 import styled, { themeGet, device } from "@theme/utils";
 export const CategoryArea = styled.div`
     padding-top: 60px;
-    ${device.medium}{
+    ${device.medium} {
         padding-top: 100px;
     }
-`
+`;
 export const HeroFourCategory = styled.div`
     border-top: 1px solid #edf0f8;
     border-bottom: 1px solid #edf0f8;
@@ -14,10 +14,10 @@ export const HeroFourCategory = styled.div`
     flex-wrap: wrap;
     justify-content: center;
 
-    ${device.large}{
+    ${device.large} {
         justify-content: space-between;
     }
-    
+
     a {
         margin: 10px;
         text-align: center;
@@ -31,13 +31,13 @@ export const HeroFourCategory = styled.div`
         font-weight: 600;
         border-radius: 10px;
         border: none;
-        ${device.large}{
+        ${device.large} {
             height: 66px;
             line-height: 66px;
             min-width: 150px;
             padding: 0px 30px;
         }
-        ${device.xlarge}{
+        ${device.xlarge} {
             height: 66px;
             line-height: 66px;
             min-width: 200px;
@@ -48,4 +48,4 @@ export const HeroFourCategory = styled.div`
             color: ${themeGet("colors.white")};
         }
     }
-`
+`;

@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
 import {
     SpecialBannerBlogPost,
     SingleSpecialBannerPost,
@@ -8,17 +8,24 @@ import {
     DecText,
     BannerPostMeta,
     PostDate,
-    ReadTime
+    ReadTime,
+} from "./style";
 
-} from './style'
-
-const SpecialBannerOne = ({title, body, date, authorSlug, dateSlug, slug}) => {
+const SpecialBannerOne = ({
+    title,
+    body,
+    date,
+    authorSlug,
+    dateSlug,
+    slug,
+}) => {
     return (
         <SpecialBannerBlogPost>
             <SingleSpecialBannerPost>
                 <SpecialBannerPostContent>
                     <BannerPostAuthor>
-                        By <Link to={`/profile/${authorSlug}`}>{authorSlug}</Link>
+                        By{" "}
+                        <Link to={`/profile/${authorSlug}`}>{authorSlug}</Link>
                     </BannerPostAuthor>
                     <Title>
                         <Link to={`/${slug}`}>{title}</Link>
@@ -33,7 +40,7 @@ const SpecialBannerOne = ({title, body, date, authorSlug, dateSlug, slug}) => {
                 </SpecialBannerPostContent>
             </SingleSpecialBannerPost>
         </SpecialBannerBlogPost>
-    )
-}
+    );
+};
 
-export default SpecialBannerOne
+export default SpecialBannerOne;

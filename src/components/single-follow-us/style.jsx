@@ -2,8 +2,7 @@ import styled, { themeGet } from "@theme/utils";
 
 export const SingleFollowItem = styled.div`
     margin-top: 15px;
-    
-`
+`;
 export const ItemLink = styled.a`
     background: #f8f7fc;
     padding: 10px;
@@ -12,8 +11,8 @@ export const ItemLink = styled.a`
     border-radius: 15px;
     padding: 17px 20px;
     &:hover {
-        color: ${themeGet('colors.white')};
-        background: ${themeGet('colors.primary')};
+        color: ${themeGet("colors.white")};
+        background: ${themeGet("colors.primary")};
         .follow-title {
             opacity: 0;
             visibility: hidden;
@@ -24,13 +23,13 @@ export const ItemLink = styled.a`
             visibility: visible;
         }
     }
-`
+`;
 export const FollowSocailIcon = styled.div`
     font-weight: 600;
-`
+`;
 export const SocailTitle = styled.span`
     margin-left: 10px;
-`
+`;
 export const FollowShareOnover = styled.div`
     position: relative;
     p {
@@ -40,7 +39,7 @@ export const FollowShareOnover = styled.div`
         transition: all 0.3s ease-in;
         color: #000000;
         font-weight: 600;
-     }
+    }
     .follow-title {
         opacity: 1;
         visibility: visible;
@@ -49,4 +48,4 @@ export const FollowShareOnover = styled.div`
         opacity: 0;
         visibility: hidden;
     }
-`
+`;

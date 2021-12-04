@@ -4,25 +4,22 @@ export const TrendingTodysArea = styled.div`
     background-color: #f8f8f8;
     position: relative;
     padding: 60px 0;
-    ${device.medium}{
+    ${device.medium} {
         padding: 80px 0;
     }
-    ${device.large}{
+    ${device.large} {
         padding: 120px 0;
     }
-`
+`;
 export const TrendingHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-`
+`;
 export const SectionTitleTwo = styled.div`
     position: relative;
-`
-export const Title = styled.h3`
-
-`
-
+`;
+export const Title = styled.h3``;
 
 export const SliderNavigation = styled.div`
     display: flex;
@@ -39,9 +36,7 @@ export const SliderNavigation = styled.div`
             border-left: 1px solid #dadada;
         }
         &:hover {
-            color: ${themeGet('colors.primary')};
+            color: ${themeGet("colors.primary")};
         }
     }
-
-`
-
+`;

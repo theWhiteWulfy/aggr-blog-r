@@ -1,41 +1,40 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import {graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 import Swiper, { SwiperSlide } from "@components/swiper";
-import TrendingTody from '../../../components/trending-tody-six'
+import TrendingTody from "../../../components/trending-tody-six";
 import {
     TrendingTodysArea,
     SliderNavigation,
     TrendingHeader,
     SectionTitleTwo,
-    Title
-} from './style'
+    Title,
+} from "./style";
 
 const TrendingArea = () => {
     const tredingArticleQuery = useStaticQuery(graphql`
-    query TredingArticleSixQuery {
-        largeTredingArticle: allMarkdownRemark(
-            filter: {frontmatter: {is_trending_article: {eq: true}}}
-          ) {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                    }
-                    fields {
-                        slug
-                        authorId
-                        dateSlug
+        query TredingArticleSixQuery {
+            largeTredingArticle: allMarkdownRemark(
+                filter: { frontmatter: { is_trending_article: { eq: true } } }
+            ) {
+                edges {
+                    node {
+                        id
+                        frontmatter {
+                            title
+                        }
+                        fields {
+                            slug
+                            authorId
+                            dateSlug
+                        }
                     }
                 }
             }
         }
-        
-    }
-`);
+    `);
 
-const tredingTodyData = tredingArticleQuery.largeTredingArticle.edges;
+    const tredingTodyData = tredingArticleQuery.largeTredingArticle.edges;
 
     return (
         <TrendingTodysArea>
@@ -56,7 +55,7 @@ const tredingTodyData = tredingArticleQuery.largeTredingArticle.edges;
                             </SliderNavigation>
                         </TrendingHeader>
                     </Col>
-                    
+
                     <Swiper
                         layout={{
                             nav: "trending-navigation",
@@ -64,7 +63,7 @@ const tredingTodyData = tredingArticleQuery.largeTredingArticle.edges;
                         }}
                         navigation={{
                             nextEl: ".trending-slider-button-next",
-                            prevEl: ".trending-slider-button-prev"
+                            prevEl: ".trending-slider-button-prev",
                         }}
                         slidesPerView={3}
                         spaceBetween={30}
@@ -83,25 +82,33 @@ const tredingTodyData = tredingArticleQuery.largeTredingArticle.edges;
                             },
                         }}
                     >
-                        {tredingTodyData && tredingTodyData.map((trending, i) => {
-                            return (
-                                <SwiperSlide key={`trending-${i}`}>
-                                    <TrendingTody
-                                        title={trending.node.frontmatter.title}
-                                        slug={trending.node.fields.slug}
-                                        authorSlug={trending.node.fields.authorId}
-                                        postAuthor={trending.node.frontmatter.author}
-                                        dateSlug={trending.node.fields.dateSlug}
-                                    />
-                                </SwiperSlide>
-                            );
-                        })}
+                        {tredingTodyData &&
+                            tredingTodyData.map((trending, i) => {
+                                return (
+                                    <SwiperSlide key={`trending-${i}`}>
+                                        <TrendingTody
+                                            title={
+                                                trending.node.frontmatter.title
+                                            }
+                                            slug={trending.node.fields.slug}
+                                            authorSlug={
+                                                trending.node.fields.authorId
+                                            }
+                                            postAuthor={
+                                                trending.node.frontmatter.author
+                                            }
+                                            dateSlug={
+                                                trending.node.fields.dateSlug
+                                            }
+                                        />
+                                    </SwiperSlide>
+                                );
+                            })}
                     </Swiper>
                 </Row>
             </Container>
-                   
         </TrendingTodysArea>
-    )
-}
+    );
+};
 
-export default TrendingArea
+export default TrendingArea;

@@ -1,7 +1,5 @@
-import styled, { device} from '@theme/utils'
-export const GagarathHistoryWrap = styled.div`
-    
-`    
+import styled, { device } from "@theme/utils";
+export const GagarathHistoryWrap = styled.div``;
 export const GagarathRow = styled.div`
     display: flex;
     align-items: center;
@@ -11,7 +9,7 @@ export const GagarathRow = styled.div`
     ${device.medium} {
         flex-direction: row;
     }
-`    
+`;
 export const GagarathCol6 = styled.div`
     width: 100%;
     flex: 0 0 auto;
@@ -25,7 +23,7 @@ export const GagarathCol6 = styled.div`
         width: 50%;
         border-bottom: none;
     }
-`    
+`;
 export const GagarathHistoryTitle = styled.h2`
     font-size: 22px;
     font-weight: 300;
@@ -35,13 +33,13 @@ export const GagarathHistoryTitle = styled.h2`
     span {
         font-weight: 600;
     }
-    ${device.medium}{
+    ${device.medium} {
         font-size: 42px;
     }
-    ${device.large}{
+    ${device.large} {
         font-size: 52px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         font-size: 62px;
     }
-`    
+`;

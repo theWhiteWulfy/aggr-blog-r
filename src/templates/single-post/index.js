@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 import Layout from "@layout";
 import SEO from "@components/seo";
 import PageBreadcrumb from "@components/pagebreadcrumb";
-import Social, {SocialLink} from "../../components/social";
+import Social, { SocialLink } from "../../components/social";
 import { graphql, Link } from "gatsby";
 import { Row, Container, Col } from "react-bootstrap";
 import { slugify } from "@utils/functions";
-import StayInTouchs from '@components/stay-in-touch';
-import LatestPostArea from '../../container/latest-post';
+import StayInTouchs from "@components/stay-in-touch";
+import LatestPostArea from "../../container/latest-post";
 import PostAuthorBox from "../../components/post-author";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { DiscussionEmbed } from "disqus-react";
@@ -38,8 +38,8 @@ import {
 
 const SinglePosts = ({ data, location, pageContext }) => {
     const post = data.markdownRemark.frontmatter;
-    const {authorId, dateSlug} = data.markdownRemark.fields;
-    const {author} = post;
+    const { authorId, dateSlug } = data.markdownRemark.fields;
+    const { author } = post;
 
     const image = getImage(post.thume_image.childImageSharp);
 
@@ -57,10 +57,7 @@ const SinglePosts = ({ data, location, pageContext }) => {
     return (
         <Layout>
             <SEO title={post.title} pathname="/" />
-            <PageBreadcrumb
-                pageContext={pageContext}
-                location={location}
-            />
+            <PageBreadcrumb pageContext={pageContext} location={location} />
             <BlogDetailsArea>
                 <Container>
                     <Row className="gx-5">
@@ -74,45 +71,66 @@ const SinglePosts = ({ data, location, pageContext }) => {
                                         />
                                     </Thumb>
                                     <Content>
-
                                         <BlogDetailsMetaBox>
                                             <PostMetaLeftSide>
                                                 <MetaBox>
                                                     {post.categories &&
-                                                        post.categories.map((categorie, i) => (
-                                                            <Link
-                                                                className={`post-category ${categorie.color}`}
-                                                                key={`${slugify(
-                                                                    categorie
-                                                                )}-${i}`}
-                                                                to={`/category/${slugify(
-                                                                    categorie.name
-                                                                )}`}
-                                                            >
-                                                                {categorie.name}
-                                                            </Link>
-                                                        )
-                                                    )}
+                                                        post.categories.map(
+                                                            (categorie, i) => (
+                                                                <Link
+                                                                    className={`post-category ${categorie.color}`}
+                                                                    key={`${slugify(
+                                                                        categorie
+                                                                    )}-${i}`}
+                                                                    to={`/category/${slugify(
+                                                                        categorie.name
+                                                                    )}`}
+                                                                >
+                                                                    {
+                                                                        categorie.name
+                                                                    }
+                                                                </Link>
+                                                            )
+                                                        )}
                                                 </MetaBox>
                                                 <BlogDetailsPostAuthor>
-                                                    By <Link to={`/profile/${authorId}`}>{author.name}</Link>
+                                                    By{" "}
+                                                    <Link
+                                                        to={`/profile/${authorId}`}
+                                                    >
+                                                        {author.name}
+                                                    </Link>
                                                 </BlogDetailsPostAuthor>
                                             </PostMetaLeftSide>
 
                                             <PostMidSide>
                                                 <PostDate>
-                                                    <i className="icofont-ui-calendar"></i> 
-                                                    <Link to={`/date/${dateSlug}`}>{post.date}</Link>
+                                                    <i className="icofont-ui-calendar"></i>
+                                                    <Link
+                                                        to={`/date/${dateSlug}`}
+                                                    >
+                                                        {post.date}
+                                                    </Link>
                                                 </PostDate>
                                                 <PostTime>10 min read</PostTime>
                                             </PostMidSide>
 
                                             <PostMetaRightSide>
-                                                <a href="#"><StaticImage src="../../data/images/icons/small-bookmark.png" alt=""/></a>
-                                                <a href="#"><StaticImage src="../../data/images/icons/heart.png" alt=""/></a>
+                                                <a href="#">
+                                                    <StaticImage
+                                                        src="../../data/images/icons/small-bookmark.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="#">
+                                                    <StaticImage
+                                                        src="../../data/images/icons/heart.png"
+                                                        alt=""
+                                                    />
+                                                </a>
                                             </PostMetaRightSide>
                                         </BlogDetailsMetaBox>
-                                        
+
                                         <Title>{post.title}</Title>
                                         <SingleBlogContent
                                             dangerouslySetInnerHTML={{
@@ -122,7 +140,6 @@ const SinglePosts = ({ data, location, pageContext }) => {
                                         />
 
                                         <CategorySocialContent>
-                                            
                                             <PostCategoryItems>
                                                 <span>Tags:</span>
                                                 {post.tags.map((tag, i) => (
@@ -140,20 +157,21 @@ const SinglePosts = ({ data, location, pageContext }) => {
                                                 ))}
                                             </PostCategoryItems>
 
-                                            <Social 
-                                                sx={{ mt: ["30px", "0"]}}
-                                                shape="rounded-5" 
+                                            <Social
+                                                sx={{ mt: ["30px", "0"] }}
+                                                shape="rounded-5"
                                                 space={15}
                                             >
-                                                <SocialLink 
+                                                <SocialLink
                                                     href={
                                                         "https://www.facebook.com/sharer/sharer.php?u=" +
                                                         baseUrl +
                                                         pageContext.slug
-                                                    }>
-                                                        <i className="icofont-facebook"></i>
+                                                    }
+                                                >
+                                                    <i className="icofont-facebook"></i>
                                                 </SocialLink>
-                                                <SocialLink 
+                                                <SocialLink
                                                     href={
                                                         "https://twitter.com/share?url=" +
                                                         baseUrl +
@@ -162,16 +180,20 @@ const SinglePosts = ({ data, location, pageContext }) => {
                                                         post.title +
                                                         "&via" +
                                                         "twitterHandle"
-                                                    }><i className="icofont-twitter"></i>
+                                                    }
+                                                >
+                                                    <i className="icofont-twitter"></i>
                                                 </SocialLink>
-                                                <SocialLink href="https://www.linkedin.com/"><i className="icofont-linkedin"></i></SocialLink>
+                                                <SocialLink href="https://www.linkedin.com/">
+                                                    <i className="icofont-linkedin"></i>
+                                                </SocialLink>
                                             </Social>
-
-
                                         </CategorySocialContent>
-                                        
+
                                         <CommentArea>
-                                            <CommentTitle>Comments</CommentTitle>
+                                            <CommentTitle>
+                                                Comments
+                                            </CommentTitle>
                                             <DiscussionEmbed
                                                 shortname={disqusShorttname}
                                                 config={disquscConfig}
@@ -188,12 +210,14 @@ const SinglePosts = ({ data, location, pageContext }) => {
                                         postAuthorName={author.name}
                                         postAuthorImage={author.image}
                                         postAuthorBio={author.bio}
-                                        postAuthordescription={author.description}
+                                        postAuthordescription={
+                                            author.description
+                                        }
                                         authorSlug={author.fields.authorId}
                                     />
-                                )}  
-                                <LatestPostArea/>
-                                <StayInTouchs/>
+                                )}
+                                <LatestPostArea />
+                                <StayInTouchs />
                             </div>
                         </Col>
                     </Row>
@@ -233,17 +257,22 @@ export const postQuery = graphql`
                     bio
                     description
                     fields {
-                      authorId
+                        authorId
                     }
                     social {
-                      twitter
-                      google
-                      facebook
+                        twitter
+                        google
+                        facebook
                     }
                     image {
-                      childImageSharp {
-                        gatsbyImageData(layout: FIXED, width: 80, height: 80, quality: 100)
-                      }
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: FIXED
+                                width: 80
+                                height: 80
+                                quality: 100
+                            )
+                        }
                     }
                 }
                 thume_image {

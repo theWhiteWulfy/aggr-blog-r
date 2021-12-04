@@ -1,14 +1,13 @@
 import styled, { device } from "@theme/utils";
 
-
 export const FromFollowingWrap = styled.div`
     padding-top: 60px;
     padding-bottom: 60px;
-    ${device.small}{
+    ${device.small} {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-`
+`;
 
 export const FromFollowingHaderArea = styled.div`
     display: flex;
@@ -18,7 +17,7 @@ export const FromFollowingHaderArea = styled.div`
     border-top: 1px solid #f3f3f3;
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 40px;
-`
+`;
 export const FollowingSliderNavigation = styled.div`
     display: flex;
     justify-content: space-between;
@@ -36,38 +35,37 @@ export const FollowingSliderNavigation = styled.div`
             margin-left: 10px;
         }
     }
-`
+`;
 export const FromFollowingLeftSide = styled.div`
     min-width: 100%;
     max-width: 100%;
     flex-grow: 1;
-    
-    ${device.medium}{
+
+    ${device.medium} {
         min-width: 650px;
     }
-    ${device.large}{
+    ${device.large} {
         min-width: 850px;
     }
-
-`
+`;
 
 export const FromFollowingRightSide = styled.div`
     min-width: 100%;
     flex-grow: 1;
-    ${device.small}{
+    ${device.small} {
         min-width: 335px;
     }
-    ${device.medium}{
+    ${device.medium} {
         min-width: 235px;
     }
-    ${device.large}{
+    ${device.large} {
         min-width: 235px;
     }
-    ${device.xlarge}{
+    ${device.xlarge} {
         min-width: 335px;
     }
-`
+`;
 
 export const FollowingAddBanner = styled.div`
     margin-top: 40px;
-`
+`;

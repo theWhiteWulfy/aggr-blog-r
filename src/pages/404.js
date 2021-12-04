@@ -6,9 +6,8 @@ import ErrorArea from "../container/error-404";
 const NotFoundPage = () => (
     <Layout>
         <SEO title="404: Not found" pathname="/" />
-        <ErrorArea/>
+        <ErrorArea />
     </Layout>
 );
-
 
 export default NotFoundPage;

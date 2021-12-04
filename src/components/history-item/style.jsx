@@ -1,4 +1,4 @@
-import styled, {device} from '@theme/utils'
+import styled, { device } from "@theme/utils";
 
 export const SingleHistoryItem = styled.div`
     padding: 30px 30px 30px 30px;
@@ -7,14 +7,11 @@ export const SingleHistoryItem = styled.div`
     &:last-of-type {
         border-bottom: none;
     }
-    ${device.medium}{
+    ${device.medium} {
         border-bottom: 1px solid #ddd;
-        
     }
-`
+`;
 export const Title = styled.h3`
     margin-bottom: 20px;
-`
-export const DecText = styled.p`
-    
-`
+`;
+export const DecText = styled.p``;

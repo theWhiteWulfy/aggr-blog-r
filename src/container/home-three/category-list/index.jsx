@@ -1,20 +1,18 @@
-import React from 'react'
-import { graphql, useStaticQuery } from "gatsby";
-import { Link } from 'gatsby';
+import React from "react";
+import { graphql, useStaticQuery, Link } from "gatsby";
+
 import { slugify } from "@utils/functions";
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from "react-bootstrap";
 
 import {
     MostpopularCategoryArea,
     SectionTitle,
     Title,
     HeroThreeCategory,
-
-} from './style'
+} from "./style";
 
 const PopularCategory = () => {
     const PopularCategoryQuery = useStaticQuery(graphql`
-        
         query popularCategoryQuery {
             categories: allCategoriesJson(limit: 9) {
                 edges {
@@ -22,7 +20,11 @@ const PopularCategory = () => {
                         name
                         image {
                             childImageSharp {
-                                gatsbyImageData(width: 260, height: 110, quality: 100)
+                                gatsbyImageData(
+                                    width: 260
+                                    height: 110
+                                    quality: 100
+                                )
                             }
                         }
                     }
@@ -30,7 +32,7 @@ const PopularCategory = () => {
             }
         }
     `);
-    const {categories} = PopularCategoryQuery
+    const { categories } = PopularCategoryQuery;
     return (
         <MostpopularCategoryArea>
             <Container>
@@ -44,15 +46,20 @@ const PopularCategory = () => {
                 <Row>
                     <Col>
                         <HeroThreeCategory>
-                            {categories.edges.map(cat => (
-                                <Link to={`/category/${slugify(cat.node.name)}`} key={cat.node.name}>{cat.node.name}</Link>
+                            {categories.edges.map((cat) => (
+                                <Link
+                                    to={`/category/${slugify(cat.node.name)}`}
+                                    key={cat.node.name}
+                                >
+                                    {cat.node.name}
+                                </Link>
                             ))}
                         </HeroThreeCategory>
                     </Col>
                 </Row>
             </Container>
         </MostpopularCategoryArea>
-    )
-}
+    );
+};
 
-export default PopularCategory
+export default PopularCategory;

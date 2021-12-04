@@ -14,10 +14,11 @@ const SocialLink = ({
     size,
     space,
     shape,
-    bgColor
+    bgColor,
 }) => {
     const socialProps = {
-        css: (theme) => createStyles(theme, dir, variant, shape, bgColor, size, space),
+        css: (theme) =>
+            createStyles(theme, dir, variant, shape, bgColor, size, space),
     };
     return (
         <StyledLink
@@ -41,10 +42,23 @@ SocialLink.propTypes = {
     href: PropTypes.string.isRequired,
     label: PropTypes.string,
     variant: PropTypes.oneOf(["contained", "outlined", "texted"]),
-    shape: PropTypes.oneOf(["square", "rounded-5", "rounded-10", "rounded-15", "oval"]),
+    shape: PropTypes.oneOf([
+        "square",
+        "rounded-5",
+        "rounded-10",
+        "rounded-15",
+        "oval",
+    ]),
     dir: PropTypes.oneOf(["horizontal", "vertical"]),
     size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
-    bgColor: PropTypes.oneOf(["default", "black", "bgWhite", "themetwo", "themethree", "transparent"]),
+    bgColor: PropTypes.oneOf([
+        "default",
+        "black",
+        "bgWhite",
+        "themetwo",
+        "themethree",
+        "transparent",
+    ]),
     space: PropTypes.number,
 };
 
