@@ -47,6 +47,6 @@
                 }
             }
         ],
-        "eslint-plugin/fixer-return:": 2
+        "eslint-plugin/fixer-return:": 0
     }
 }

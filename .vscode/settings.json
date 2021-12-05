@@ -14,9 +14,9 @@
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "GitHub.copilot"
     },
     "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
     "eslint.validate": ["react", "html", "javascript"],
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "GitHub.copilot"
 }
