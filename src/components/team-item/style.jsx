@@ -44,5 +44,5 @@ export const NameTitle = styled.h6`
     color: #ffffff;
 `;
 export const Desination = styled.p`
-    color: #ffc4a0;
+    color: #250c83;
 `;

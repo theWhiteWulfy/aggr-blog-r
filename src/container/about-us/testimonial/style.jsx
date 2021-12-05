@@ -21,12 +21,12 @@ export const NavigationButton = styled.div`
     width: 50px;
     height: 50px;
     line-height: 45px;
-    border: 2px solid #ffc4a0;
+    border: 2px solid #250c83;
     text-align: center;
     font-size: 25px;
     border-radius: 500000px;
     color: #ffffff;
-    background-color: #ffc4a0;
+    background-color: #250c83;
     transition: all 0.3s ease-in-out;
     margin: 10px;
 `;

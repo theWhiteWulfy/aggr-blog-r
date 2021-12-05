@@ -88,7 +88,7 @@ export const MetaBox = styled.div`
         padding: 4px 5px;
         border-radius: 10px;
         color: #222;
-        background-color: #ffc4a0;
+        background-color: #250c83;
     }
     .post-author {
         color: #595959;
@@ -139,7 +139,7 @@ export const SingleBlogContent = styled.div`
             color: #222;
         }
         &::before {
-            color: #ffc4a0;
+            color: #250c83;
             font-size: 106px;
             position: absolute;
             content: "“";

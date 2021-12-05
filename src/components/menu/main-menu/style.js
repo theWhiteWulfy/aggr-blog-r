@@ -45,9 +45,11 @@ export const Navitem = styled.li`
         &:hover,
         &.active {
             color: ${themeGet("colors.primary")};
+            font-weight: bold;
         }
         &[aria-current="page"] {
             color: ${themeGet("colors.primary")} !important;
+            font-weight: bold;
         }
     }
 
@@ -93,6 +95,7 @@ export const Navitem = styled.li`
                     transition: 0s;
                     &:hover {
                         color: ${themeGet("colors.primary")};
+                        text-decoration: underline;
                     }
                 }
             }
