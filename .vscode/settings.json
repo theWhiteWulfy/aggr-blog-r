@@ -3,6 +3,7 @@
         ".git/": true,
         "node_modules/": true,
         "public/": true,
+        ".cache/": true,
         "temp/": true
     },
     "search.exclude": {
