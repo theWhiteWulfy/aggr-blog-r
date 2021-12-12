@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import Layout from "@layout";
 import SEO from "@components/seo";
 import PageBreadcrumb from "../components/pagebreadcrumb";
-import AboutUsVideoArea from "../container/about-us/about-us-video-banner";
 import AboutPlatform from "../container/about-us/about-platform";
-import lokaldtHistoryArea from "../container/about-us/lokaldt-history";
+import LokaldtHistoryArea from "../container/about-us/lokaldt-history";
 import TeamMembersArea from "../container/about-us/team-members";
 import TestimonialArea from "../container/about-us/testimonial";
 
@@ -18,9 +17,8 @@ const AboutUsPage = ({ location, pageContext }) => {
                 location={location}
                 title="About Us"
             />
-            <AboutUsVideoArea />
             <AboutPlatform />
-            <lokaldtHistoryArea />
+            <LokaldtHistoryArea />
             <TeamMembersArea />
             <TestimonialArea />
         </Layout>

@@ -142,7 +142,7 @@ export const CopyrightText = styled.p`
         }
     }
     a {
-        color: ${themeGet("colors.primary")};
+        color: ${themeGet("colors.light")};
     }
     ${device.medium} {
         padding: 0;

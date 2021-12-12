@@ -239,7 +239,7 @@ const FooterThree = () => {
                             <FooterBottomInner>
                                 <CopyrightText>
                                     &copy; {new Date().getFullYear()}
-                                    Made with <HeartIcon /> by{" "}
+                                    &nbsp;Made with <HeartIcon /> by{" "}
                                     <a
                                         href="https://alokprateek.in/"
                                         target="_blank"

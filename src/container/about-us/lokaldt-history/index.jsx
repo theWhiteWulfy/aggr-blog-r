@@ -9,9 +9,9 @@ import {
     lokaldtHistoryTitle,
 } from "./style";
 
-const lokaldtHistoryArea = () => {
-    const lokaldtHistoryAreaQery = useStaticQuery(graphql`
-        query lokaldtHistoryAreaQery {
+const LokaldtHistoryArea = () => {
+    const LokaldtHistoryAreaQery = useStaticQuery(graphql`
+        query LokaldtHistoryAreaQery {
             aboutUsJson(id: { eq: "about-us-pages" }) {
                 id
                 history_title
@@ -23,7 +23,7 @@ const lokaldtHistoryArea = () => {
             }
         }
     `);
-    const { history_title, history } = lokaldtHistoryAreaQery.aboutUsJson;
+    const { history_title, history } = LokaldtHistoryAreaQery.aboutUsJson;
 
     return (
         <lokaldtHistoryWrap>
@@ -55,4 +55,4 @@ const lokaldtHistoryArea = () => {
     );
 };
 
-export default lokaldtHistoryArea;
+export default LokaldtHistoryArea;
