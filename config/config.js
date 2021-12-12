@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /*  company-name LOKAL Directory
-    module-name gagarath
+    module-name lokaldt
 */    
 
 module.exports = {
