@@ -3,15 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import HistoryItem from "@components/history-item";
 import {
-    GagarathHistoryWrap,
-    GagarathRow,
-    GagarathCol6,
-    GagarathHistoryTitle,
+    lokaldtHistoryWrap,
+    lokaldtRow,
+    lokaldtCol6,
+    lokaldtHistoryTitle,
 } from "./style";
 
-const GagarathHistoryArea = () => {
-    const gagarathHistoryAreaQery = useStaticQuery(graphql`
-        query GagarathHistoryAreaQery {
+const lokaldtHistoryArea = () => {
+    const lokaldtHistoryAreaQery = useStaticQuery(graphql`
+        query lokaldtHistoryAreaQery {
             aboutUsJson(id: { eq: "about-us-pages" }) {
                 id
                 history_title
@@ -23,22 +23,22 @@ const GagarathHistoryArea = () => {
             }
         }
     `);
-    const { history_title, history } = gagarathHistoryAreaQery.aboutUsJson;
+    const { history_title, history } = lokaldtHistoryAreaQery.aboutUsJson;
 
     return (
-        <GagarathHistoryWrap>
+        <lokaldtHistoryWrap>
             <Container>
                 <Row>
                     <Col>
-                        <GagarathRow>
-                            <GagarathCol6>
-                                <GagarathHistoryTitle
+                        <lokaldtRow>
+                            <lokaldtCol6>
+                                <lokaldtHistoryTitle
                                     dangerouslySetInnerHTML={{
                                         __html: history_title,
                                     }}
                                 />
-                            </GagarathCol6>
-                            <GagarathCol6>
+                            </lokaldtCol6>
+                            <lokaldtCol6>
                                 {history.map((itemData) => (
                                     <HistoryItem
                                         key={itemData.id}
@@ -46,13 +46,13 @@ const GagarathHistoryArea = () => {
                                         decText={itemData.decText}
                                     />
                                 ))}
-                            </GagarathCol6>
-                        </GagarathRow>
+                            </lokaldtCol6>
+                        </lokaldtRow>
                     </Col>
                 </Row>
             </Container>
-        </GagarathHistoryWrap>
+        </lokaldtHistoryWrap>
     );
 };
 
-export default GagarathHistoryArea;
+export default lokaldtHistoryArea;

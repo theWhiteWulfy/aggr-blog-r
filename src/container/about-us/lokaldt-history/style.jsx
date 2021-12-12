@@ -1,6 +1,6 @@
 import styled, { device } from "@theme/utils";
-export const GagarathHistoryWrap = styled.div``;
-export const GagarathRow = styled.div`
+export const lokaldtHistoryWrap = styled.div``;
+export const lokaldtRow = styled.div`
     display: flex;
     align-items: center;
     border-top: 1px solid #ddd;
@@ -10,7 +10,7 @@ export const GagarathRow = styled.div`
         flex-direction: row;
     }
 `;
-export const GagarathCol6 = styled.div`
+export const lokaldtCol6 = styled.div`
     width: 100%;
     flex: 0 0 auto;
     border-left: 1px solid #ddd;
@@ -24,7 +24,7 @@ export const GagarathCol6 = styled.div`
         border-bottom: none;
     }
 `;
-export const GagarathHistoryTitle = styled.h2`
+export const lokaldtHistoryTitle = styled.h2`
     font-size: 22px;
     font-weight: 300;
     margin-right: 30px;

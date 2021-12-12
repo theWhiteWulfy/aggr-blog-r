@@ -5,7 +5,7 @@ import SEO from "@components/seo";
 import PageBreadcrumb from "../components/pagebreadcrumb";
 import AboutUsVideoArea from "../container/about-us/about-us-video-banner";
 import AboutPlatform from "../container/about-us/about-platform";
-import GagarathHistoryArea from "../container/about-us/gagarath-history";
+import lokaldtHistoryArea from "../container/about-us/lokaldt-history";
 import TeamMembersArea from "../container/about-us/team-members";
 import TestimonialArea from "../container/about-us/testimonial";
 
@@ -20,7 +20,7 @@ const AboutUsPage = ({ location, pageContext }) => {
             />
             <AboutUsVideoArea />
             <AboutPlatform />
-            <GagarathHistoryArea />
+            <lokaldtHistoryArea />
             <TeamMembersArea />
             <TestimonialArea />
         </Layout>
