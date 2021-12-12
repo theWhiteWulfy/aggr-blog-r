@@ -15,6 +15,7 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from "react-accessible-accordion";
+//CMS
 const FaqArea = () => {
     const faqSectionQuery = useStaticQuery(graphql`
         query FaqSectionQuery {

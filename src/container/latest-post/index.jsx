@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
 import SideLatestPosts from "../../components/side-latest-post";
 import { LatestPostInnerWrap, LatestPostHeader, LatestPostBox } from "./style";
+//CMS
 const LatestPostArea = (props) => {
     const sideLatestPostsQuery = useStaticQuery(graphql`
         query SideLatestPostsQuery {
