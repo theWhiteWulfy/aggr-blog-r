@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Row, Col } from "react-bootstrap";
-import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Button from "../../components/shared/button";
 import {
@@ -14,29 +13,10 @@ import {
     Title,
     ButtonBox,
 } from "./style";
-const ErrorArea = () => {
-    const errorSectionQuery = useStaticQuery(graphql`
-        query ErrorSectionQuery {
-            errorJson(id: { eq: "error-area" }) {
-                heading
-                subHeading
-                image1 {
-                    childImageSharp {
-                        gatsbyImageData
-                    }
-                }
-                image2 {
-                    childImageSharp {
-                        gatsbyImageData
-                    }
-                }
-            }
-        }
-    `);
 
-    const { heading, subHeading, image1, image2 } = errorSectionQuery.errorJson;
-    const image = getImage(image1);
-    const imageShap = getImage(image2);
+const ErrorArea = () => {
+    const image = getImage("../../data/images/banners/error-404.png");
+    const imageShap = getImage("../../data/images/banners/error-404-shap.png");
 
     return (
         <ErrorWrap>
@@ -48,8 +28,11 @@ const ErrorArea = () => {
                                 <GatsbyImage image={image} alt="" />
                             </BannerWrap>
                             <ErrorText>
-                                <SubTitle>{subHeading}</SubTitle>
-                                <Title>{heading}</Title>
+                                <SubTitle>This Page is Not Found.</SubTitle>
+                                <Title>
+                                    We are sorry for this error. Can’t find this
+                                    page.
+                                </Title>
                                 <ButtonBox sx={{ mt: "30px" }}>
                                     <Button
                                         path="/"
