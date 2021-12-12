@@ -15,7 +15,7 @@ const ContactFormBox = () => {
                 <Input type="text" name="con_phone" placeholder="Phone" />
             </SingleInputBox>
             <SingleInputBox>
-                <Textarea name="con_message" placeholder="Massage"></Textarea>
+                <Textarea name="con_message" placeholder="Message"></Textarea>
             </SingleInputBox>
             <SingleInputBox>
                 <Button type="submit" size="large" shape="rounded-10">
